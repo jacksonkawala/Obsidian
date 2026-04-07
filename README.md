@@ -1,0 +1,2 @@
+# Obsidian
+My Second Brain
