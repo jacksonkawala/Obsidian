@@ -1,0 +1,42 @@
+.page-view {
+  max-width: 900px;
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.page-breadcrumb a {
+  color: var(--accent);
+  text-transform: capitalize;
+}
+
+.page-breadcrumb .sep {
+  color: var(--text-muted);
+}
+
+.page-breadcrumb span:last-child {
+  color: var(--text);
+}
+
+.page-error {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.page-error h2 {
+  margin-bottom: 8px;
+}
+
+.page-error p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.loading {
+  color: var(--text-muted);
+}

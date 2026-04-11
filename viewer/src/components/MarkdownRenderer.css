@@ -1,0 +1,67 @@
+.markdown-body {
+  max-width: 800px;
+  line-height: 1.75;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  margin: 32px 0 12px;
+}
+
+.markdown-body h3 {
+  font-size: 1.2em;
+  margin: 24px 0 8px;
+}
+
+.markdown-body p {
+  margin: 12px 0;
+}
+
+.markdown-body ul, .markdown-body ol {
+  padding-left: 24px;
+  margin: 8px 0;
+}
+
+.markdown-body li {
+  margin: 4px 0;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 16px;
+  margin: 16px 0;
+  color: var(--text-muted);
+}
+
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.wiki-link {
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.wiki-link:hover {
+  color: var(--accent-hover);
+}
+
+/* KaTeX overrides for dark theme */
+.katex {
+  color: var(--text-bright);
+}
+
+.katex-display {
+  margin: 16px 0;
+  overflow-x: auto;
+}

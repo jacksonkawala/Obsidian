@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(brew install:*)",
+      "Bash(npm --version)",
+      "Bash(npm install:*)",
+      "Bash(node server.js)",
+      "Bash(curl -s http://localhost:3001/api/pages)",
+      "Bash(curl -s http://localhost:3001/api/index)",
+      "Bash(curl -s http://localhost:3001/api/log)",
+      "Bash(npx vite:*)",
+      "Bash(mkdir -p /Users/jacksonkawala/Documents/github/Obsidian/raw/geotech /Users/jacksonkawala/Documents/github/Obsidian/wiki/geotech)",
+      "Bash(mv \"/Users/jacksonkawala/Documents/github/Obsidian/raw/tsf/Daily Geotechnical Report 08_04_2026.pdf\" /Users/jacksonkawala/Documents/github/Obsidian/raw/geotech/)",
+      "Bash(touch /Users/jacksonkawala/Documents/github/Obsidian/raw/geotech/.gitkeep)",
+      "Bash(python3:*)",
+      "Bash(open:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

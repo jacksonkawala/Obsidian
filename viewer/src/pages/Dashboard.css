@@ -1,0 +1,72 @@
+.dashboard h1 {
+  font-size: 2em;
+  margin-bottom: 4px;
+}
+
+.dash-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.domain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.domain-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.domain-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.domain-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.domain-card h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.domain-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.domain-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.domain-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.recent-activity {
+  margin-top: 16px;
+}
+
+.recent-activity h2 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+}
