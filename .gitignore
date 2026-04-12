@@ -6,5 +6,8 @@ Thumbs.db
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 
+# Dependencies
+node_modules/
+
 # Large raw files (uncomment to exclude PDFs from git)
 # raw/**/*.pdf
