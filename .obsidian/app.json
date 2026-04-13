@@ -1,0 +1,23 @@
+{
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "attachmentFolderPath": "raw/assets",
+  "defaultViewMode": "preview",
+  "foldHeading": true,
+  "foldIndent": true,
+  "showFrontmatter": false,
+  "strictLineBreaks": true,
+  "readableLineLength": true,
+  "showLineNumber": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "wiki",
+  "promptDelete": true,
+  "trashOption": "local",
+  "livePreview": true,
+  "autoConvertHtml": false,
+  "vimMode": false,
+  "interfaceFontSize": 15,
+  "textFontSize": 16,
+  "monospaceFontSize": 14
+}

@@ -65,3 +65,16 @@
   margin: 16px 0;
   overflow-x: auto;
 }
+
+/* Red glow for critical freeboard / RED alert values */
+td.alert-red-glow {
+  color: #ef4444 !important;
+  font-weight: 700;
+  background: rgba(239, 68, 68, 0.1) !important;
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.6), 0 0 16px rgba(239, 68, 68, 0.3);
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+td.alert-red-glow strong {
+  color: #ef4444;
+}

@@ -9,5 +9,5 @@ Thumbs.db
 # Dependencies
 node_modules/
 
-# Large raw files (uncomment to exclude PDFs from git)
-# raw/**/*.pdf
+# Large raw files
+raw/**/*.pdf

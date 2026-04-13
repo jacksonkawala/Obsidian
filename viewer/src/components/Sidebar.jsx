@@ -6,6 +6,7 @@ const domains = [
   { key: 'journal', label: 'Journal', color: 'var(--domain-journal)' },
   { key: 'tsf', label: 'TSF', color: 'var(--domain-tsf)' },
   { key: 'geotech', label: 'Geotech', color: 'var(--domain-geotech)' },
+  { key: 'water', label: 'Water', color: 'var(--domain-water)' },
   { key: 'kenmare', label: 'Kenmare', color: 'var(--domain-kenmare)' },
   { key: 'cssm', label: 'CSSM', color: 'var(--domain-cssm)' },
   { key: 'concepts', label: 'Concepts', color: 'var(--domain-concepts)' },

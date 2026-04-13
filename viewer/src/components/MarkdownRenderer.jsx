@@ -1,3 +1,4 @@
+import { createContext, useContext } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -12,6 +13,17 @@ function processWikilinks(text) {
     return `[${link}](wiki-link://${slug})`
   })
 }
+
+// Extract all text from a hast node tree
+function extractText(node) {
+  if (!node) return ''
+  if (node.type === 'text') return node.value || ''
+  if (node.children) return node.children.map(extractText).join('')
+  return ''
+}
+
+// Context: is the current row a "freeboard" row?
+const FreeboardRowCtx = createContext(false)
 
 export default function MarkdownRenderer({ content }) {
   const navigate = useNavigate()
@@ -32,7 +44,6 @@ export default function MarkdownRenderer({ content }) {
                   className="wiki-link"
                   onClick={(e) => {
                     e.preventDefault()
-                    // Try to navigate — the slug could be in any domain
                     navigate(`/wiki/concepts/${slug}`)
                   }}
                 >
@@ -41,7 +52,46 @@ export default function MarkdownRenderer({ content }) {
               )
             }
             return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
-          }
+          },
+
+          // Track whether this row is about freeboard
+          tr({ children, node }) {
+            const firstCell = node?.children?.find(
+              c => c.tagName === 'td' || c.tagName === 'th'
+            )
+            const firstText = extractText(firstCell).toLowerCase()
+            const isFreeboardRow = /freeboard/.test(firstText)
+            return (
+              <FreeboardRowCtx.Provider value={isFreeboardRow}>
+                <tr>{children}</tr>
+              </FreeboardRowCtx.Provider>
+            )
+          },
+
+          // Conditionally highlight table cells
+          td({ children, node }) {
+            const isFreeboardRow = useContext(FreeboardRowCtx)
+            const text = extractText(node).trim()
+
+            let cellClass = ''
+
+            // "RED" alert text anywhere in the cell
+            if (/\bRED\b/.test(text)) {
+              cellClass = 'alert-red-glow'
+            }
+            // Low freeboard value in a freeboard row
+            else if (isFreeboardRow) {
+              const match = text.match(/^(\d+\.?\d*)\s*m?$/)
+              if (match) {
+                const val = parseFloat(match[1])
+                if (val < 2.0 && val >= 0) {
+                  cellClass = 'alert-red-glow'
+                }
+              }
+            }
+
+            return <td className={cellClass || undefined}>{children}</td>
+          },
         }}
       >
         {processed}

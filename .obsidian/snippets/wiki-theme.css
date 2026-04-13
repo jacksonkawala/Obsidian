@@ -1,0 +1,214 @@
+/* ============================================
+   Obsidian Wiki Theme — Custom CSS Snippet
+   Tailored for LLM-maintained knowledge base
+   ============================================ */
+
+/* --- TARP Status Colors in bold text --- */
+strong:is(
+  :has(+ :not(*))
+) {
+  /* Catch-all: don't break normal bold */
+}
+
+/* Color TARP levels when mentioned inline */
+.markdown-preview-view strong {
+  /* Default bold styling */
+}
+
+/* --- Frontmatter Properties as Badges --- */
+.metadata-container .metadata-property {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin: 2px;
+}
+
+.metadata-container .metadata-property[data-property-key="domain"] {
+  background: var(--background-modifier-success);
+  color: var(--text-on-accent);
+}
+
+.metadata-container .metadata-property[data-property-key="type"] {
+  background: var(--background-modifier-message);
+}
+
+.metadata-container .metadata-property[data-property-key="tags"] .multi-select-pill {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-radius: 10px;
+  padding: 1px 8px;
+  font-size: 0.85em;
+}
+
+/* --- Kanban-style tables (To Do / In Progress / Done) --- */
+.markdown-preview-view table:has(th:first-child:is([align="left"])) {
+  border-collapse: separate;
+  border-spacing: 8px 0;
+  width: 100%;
+}
+
+.markdown-preview-view table th {
+  text-align: center !important;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-bottom: 3px solid var(--interactive-accent);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.markdown-preview-view table td {
+  vertical-align: top;
+  padding: 8px 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+}
+
+/* --- Callout: RED / ORANGE / YELLOW / GREEN status --- */
+.callout[data-callout="red"],
+.callout[data-callout="red-alert"] {
+  --callout-color: 239, 68, 68;
+  --callout-icon: lucide-alert-triangle;
+}
+
+.callout[data-callout="orange"],
+.callout[data-callout="orange-alert"] {
+  --callout-color: 245, 158, 11;
+  --callout-icon: lucide-alert-circle;
+}
+
+.callout[data-callout="yellow"],
+.callout[data-callout="yellow-alert"] {
+  --callout-color: 234, 179, 8;
+  --callout-icon: lucide-info;
+}
+
+.callout[data-callout="green"],
+.callout[data-callout="green-alert"] {
+  --callout-color: 34, 197, 94;
+  --callout-icon: lucide-check-circle;
+}
+
+/* --- Enhanced wikilinks --- */
+.internal-link {
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+
+.internal-link:hover {
+  text-decoration-style: solid;
+}
+
+/* Unresolved links in a distinct color */
+.internal-link.is-unresolved {
+  color: var(--text-faint);
+  opacity: 0.7;
+  text-decoration-style: dashed;
+}
+
+/* --- Heading tweaks --- */
+.markdown-preview-view h1 {
+  border-bottom: 2px solid var(--interactive-accent);
+  padding-bottom: 6px;
+  margin-top: 1.5em;
+}
+
+.markdown-preview-view h2 {
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 4px;
+  margin-top: 1.3em;
+}
+
+/* --- Data tables: zebra striping --- */
+.markdown-preview-view table tbody tr:nth-child(even) {
+  background-color: var(--background-secondary);
+}
+
+.markdown-preview-view table tbody tr:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+/* --- Tags in reading view --- */
+.tag {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+/* --- Domain-specific tag colors --- */
+.tag[href="#tsf"],
+.tag[href="#tailings"] {
+  background: #ef4444;
+}
+
+.tag[href="#geotech"],
+.tag[href="#geotechnical"] {
+  background: #99cc33;
+  color: #1a1a1a;
+}
+
+.tag[href="#water"],
+.tag[href="#hydrology"] {
+  background: #3b82f6;
+}
+
+.tag[href="#kenmare"],
+.tag[href="#moma"] {
+  background: #f59e0b;
+  color: #1a1a1a;
+}
+
+.tag[href="#cssm"] {
+  background: #8b5cf6;
+}
+
+.tag[href="#nataka"] {
+  background: #ef4444;
+}
+
+/* --- Embed/transclusion styling --- */
+.markdown-embed {
+  border-left: 3px solid var(--interactive-accent);
+  border-radius: 0 6px 6px 0;
+  padding: 8px 12px;
+  margin: 8px 0;
+}
+
+/* --- Compact properties view --- */
+.metadata-container {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--background-secondary);
+  margin-bottom: 16px;
+}
+
+/* --- Graph view domain colors (reinforcing config) --- */
+.graph-view.color-fill-tag.tag-tsf { color: #ef4444; }
+.graph-view.color-fill-tag.tag-geotech { color: #99cc33; }
+.graph-view.color-fill-tag.tag-water { color: #3381ff; }
+.graph-view.color-fill-tag.tag-kenmare { color: #f59e0b; }
+.graph-view.color-fill-tag.tag-cssm { color: #ffff00; }
+
+/* --- Math blocks (CSSM) --- */
+mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+
+/* --- Scrollable wide tables --- */
+.markdown-preview-view .table-wrapper {
+  overflow-x: auto;
+}
+
+/* --- Source list at bottom of wiki pages --- */
+.markdown-preview-view h2:last-of-type + ul {
+  font-size: 0.9em;
+  color: var(--text-muted);
+}

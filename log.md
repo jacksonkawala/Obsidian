@@ -1,6 +1,6 @@
 ---
 title: Wiki Log
-updated: 2026-04-10
+updated: 2026-04-12
 
 ---
 
@@ -186,3 +186,136 @@ Set up LLM Wiki structure with four domains: Journal, TSF, Kenmare, CSSM. Create
 - **WCP-A WL rising** — 37.20 → 37.40 mRL (+0.20 m)
 - **Paddock 61 improving** — water drying out (was building up previously)
 - Valley 3 embankment reinstatement in progress
+
+## [2026-04-12] ingest | CSSM Chapter 4 — Determining State Parameter In-Situ
+
+**Source:** `raw/cssm/Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf`, Chapter 4 (pp. 143--201)
+**Book:** *Soil Liquefaction: A Critical State Approach*, 2nd ed., Jefferies & Been (2016)
+
+**Pages created/updated:**
+- `wiki/cssm/chapter-04-state-parameter-in-situ.md` — NEW: Chapter 4 study notes covering in-situ determination of state parameter from CPT data
+
+**Key takeaways:**
+- CPT is strongly preferred over SPT: superior repeatability (adjacent soundings virtually identical vs SPT fluctuations of +/-25%), continuous data, three data channels
+- CPT inversion is an inverse problem: $Q_p = f(\psi, G, \sigma'_v, M, \ldots)$. Only one measured quantity ($q_t$) so soil properties must be independently determined from lab testing
+- Cavity expansion with NAMC soil model gives the theoretical basis; the $Q_p$--$\psi$ relationship is a simple exponential: $Q_p = k\exp(-m\psi)$
+- Original $k$, $m$ from Been et al. (1986, 1987c) using 13 CC sands are functions of $\lambda_{10}$ alone; accuracy $\Delta\psi \pm 0.05$ at 90% confidence
+- Stress-level bias (up to $\Delta\psi \approx 0.05$) is caused by the missing dimensionless group: elastic rigidity $I_r = G/p_o$. Shuttle and Jefferies (1998) resolved this via NorSand cavity expansion simulations, giving $k$ and $m$ as functions of $I_r$, $M$, $H$, $N$, $\lambda$
+- General inversion (Table 4.3) recovers $\psi$ to $\pm 0.02$ accuracy from randomly generated soil property sets
+- For silts and undrained penetration, Shuttle and Cunning (2007) effective stress extension: $Q_p(1-B_q)+1 = \bar{k}\exp(-\bar{m}\psi)$
+- Screening-level: Plewes method estimates $\lambda_{10} = F/10$ from friction ratio; combined with $\bar{k}/M$ and $\bar{m}$ trends, gives $\psi$ contours on the $I_c$ classification chart
+- Jaky equation underestimates $K_o$ by factor of 2 in hydraulic fills ($K_o \approx 0.7$ measured vs 0.45 predicted); SBP with IFM is the preferred measurement method
+- Seismic cone (SCPT) is the preferred method for $G_{\max}$ in-situ; $G$ varies with fabric and cannot be reliably estimated from lab alone
+- Directly applicable to Nataka TSF: specifying CPTu with seismic capability, using $K_o = 0.7$ for tailings, screening with Plewes method, and full inversion with lab-derived properties
+
+## [2026-04-12] ingest | CSSM Chapter 9 — Practical Implementation of Critical State Approach
+
+**Source:** `raw/cssm/Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf`, Chapter 9 (pp. 401--437)
+**Book:** *Soil Liquefaction: A Critical State Approach*, 2nd ed., Jefferies & Been (2016)
+
+**Pages created/updated:**
+- `wiki/cssm/chapter-09-practical-implementation.md` — NEW: Chapter 9 study notes covering the complete procedure for implementing the critical state approach in engineering practice
+
+**Key takeaways:**
+- Response = Properties x State; in-situ tests measure state ($\psi$), lab tests measure properties ($\Gamma$, $\lambda_{10}$, $M_{tc}$, $N$, $\chi_{tc}$, $H$, $G_{\max}$)
+- Minimum three-test suite: Test A (CIU, loose, low stress), Test B (CID, loose, high stress), Test C (CID, dense, low stress); practical programme is ~10 triaxial tests plus 20 PSDs, bender element, and CSS tests
+- Five soil properties determined from three trend-line plots: CSL ($\Gamma$, $\lambda_{10}$), stress-dilatancy ($M_{tc}$, $N$), state-dilatancy ($\chi_{tc}$)
+- Validation by NorSand IFM: fit drained tests first (plastic properties), then undrained tests (elasticity). $H$ varies linearly with $\psi_o$
+- Worked example on Nerlerk 270/1 sand: $\Gamma = 0.855$, $\lambda_{10} = 0.048$, $M_{tc} = 1.27$, $N = 0.40$, $\chi_{tc} = 4.0$ -- provides reference values for Nataka tailings
+- Cyclic strength: CSS tests give CRR vs $N_L$ curves at different $\psi$; reduced to CRR = $a - b\psi_o$ for input to CPT processing
+- CPT_plot spreadsheet: 4 methods for $\psi$ computation, three report-figure templates, NCEER and state-based CRR profiles
+- CPT equipment: specify CPTU with independent friction transducer, 10--20 MPa tip capacity, 1 Hz minimum scan rate, ASCII data output
+- Default $K_o = 0.7$ for normally consolidated soils; dissipation tests essential for piezometric profile
+- Data archiving: ASCII text with full headers; 4000 scans per triaxial test; engineered to be readable in 50+ years
+
+## [2026-04-12] ingest | CSSM Chapter 3 — Constitutive Modelling for Liquefaction
+
+**Source:** `raw/cssm/Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf`, Chapter 3 (pp. 101-139)
+**Book:** *Soil Liquefaction: A Critical State Approach*, 2nd ed., Jefferies & Been (2016)
+
+**Pages created/updated:**
+- `wiki/cssm/chapter-03-constitutive-modelling.md` — NEW: Chapter 3 study notes covering constitutive modelling from plasticity foundations through NorSand
+
+**Key takeaways:**
+- Plasticity theory foundations: strain decomposition, normality (associated flow), yield surfaces. Mohr-Coulomb is not a yield surface — Drucker et al. (1957) resolved this with the cap model
+- Cambridge models (Original Cam Clay, Granta Gravel) derive from a single idealisation: constant dimensionless plastic energy dissipation rate equals $M$. This gives stress-dilatancy $D^p = M - \eta$ and the yield surface $\eta/M = 1 - \ln(p/p_c)$
+- Cam Clay fails for sands because the single-NCL assumption produces absurd overconsolidation ratios ($R > 10^5$) for moderate dense states ($\psi = -0.2$). The Hvorslev surface "fix" abandons the density insight that motivated Cambridge models
+- Real soils have an infinity of NCL — confirmed by Erksak sand isotropic compression tests and Molikpaq berm CPT data. Each NCL is a hardening law for an associated yield surface
+- NorSand generalises CSSM using the state parameter as an internal variable, an evolving image stress ratio $M_i$, and shear-strain hardening. Cam Clay is a degenerate special case
+- Seven parameters: $\Gamma$, $\lambda$ (CSL); $M_{tc}$, $N$, $H$, $\chi_{tc}$ (plasticity); $I_r$, $\nu$ (elasticity)
+- Validated against 11 Erksak 330/0.7 drained triaxial tests spanning $\psi$ from -0.17 to +0.08; $H$ depends linearly on $\psi_o$ ($H = 103 - 980\psi_o$)
+- Internal cap (Equation 3.38) controls realistic dilatancy via normality — no need for non-associated flow
+- 3D generalisation validated via plane strain prediction from triaxial calibration (Brasted sand)
+- Direct relevance to Nataka TSF: tailings are loose saturated soils with positive $\psi$; the infinity of NCL matters for hydraulic fill; NorSand parameters are determinable from standard tests
+
+## [2026-04-12] ingest | CSSM Chapter 1 — Introduction
+
+**Source:** `raw/cssm/Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf`, Chapter 1 (pp. 1-34)
+**Book:** *Soil Liquefaction: A Critical State Approach*, 2nd ed., Jefferies & Been (2016)
+
+**Pages created/updated:**
+- `wiki/cssm/chapter-01-introduction.md` — NEW: Chapter 1 study notes covering the state parameter, critical state approach, and ten liquefaction case histories
+
+**Key takeaways:**
+- State parameter $\psi = e - e_c$ is the central framework — density relative to the critical state locus at current stress
+- Liquefaction is constitutive behaviour, not a vague concept — "if it does not compute, then you have nothing"
+- Ten case histories span static (Fort Peck, Nerlerk, Merriespruit), seismic (Niigata, Lower San Fernando, Wildlife Site), cyclic (Molikpaq), vibration (Ackermann Lake), and mine waste (Aberfan) liquefaction
+- The observational method is inapplicable to liquefaction — behaviour is brittle
+- Merriespruit directly parallels TSF overtopping risk; density variability connects to Lift 1 compaction QA
+
+## [2026-04-12] ingest | CSSM Chapter 2 — Dilatancy and the State Parameter
+
+**Source:** `raw/cssm/Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf`, Chapter 2 (pp. 35--99)
+**Book:** *Soil Liquefaction: A Critical State Approach*, 2nd ed., Jefferies & Been (2016)
+
+**Pages created/updated:**
+- `wiki/cssm/chapter-02-dilatancy.md` — NEW: Full chapter study notes covering dilatancy, critical state, stress--dilatancy, state parameter, experimental evidence, CSL determination, soil properties, plane strain tests, generalised stress states
+
+**Key takeaways:**
+- State parameter $\psi = e - e_c$ validated as universal normalising index across 35 sands to sandy silts (Table 2.1), confining stresses from 19 to 8000 kPa
+- State--dilatancy law $D_\text{min} = \chi_{tc}\cdot\psi$ introduces soil property $\chi_{tc}$ (typical range 2.7--5.2) that reduces scatter in dilatancy predictions
+- Rowe's stress--dilatancy recast as $\eta = f(M_f, D^p)$; operational friction ratio $M_i$ evolves with strain and requires fabric tensor alongside $\psi$
+- CSL uniqueness confirmed: quasi-steady state (phase transformation) is the main source of confusion; drained and undrained tests relate to the same CSL
+- Critical state soil properties: $\Gamma$ (0.9--1.4), $\lambda_{10}$ (0.02--0.25), $M_{tc}$ (1.15--1.60), $\chi_{tc}$ (2.7--5.2) — all dimensionless, intrinsic, measured under triaxial compression
+- Plane strain data (Cornforth 1961) shows $\phi_c$ increases ~2° over triaxial compression; $M(\theta)$ best fit by average of Mohr--Coulomb and Matsuoka--Nakai criteria
+- Tailings sands/silts from Table 2.1 (Hilton Mines, Highland Valley, Faro, Syncrude, Sudbury) provide reference values for Nataka TSF characterisation
+- Threshold of $\psi_o < -0.06$ needed before undrained strength reliably exceeds drained — implications for Lift 1 density specifications
+
+## [2026-04-12] ingest | CSSM Chapter 6 — Static Liquefaction and Post-Liquefaction Strength
+
+**Source:** `raw/cssm/Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf`, Chapter 6 (pp. 225--313)
+**Book:** *Soil Liquefaction: A Critical State Approach*, 2nd ed., Jefferies & Been (2016)
+
+**Pages created/updated:**
+- `wiki/cssm/chapter-06-static-liquefaction.md` — NEW: Full chapter study notes covering static liquefaction, undrained NorSand, collapse surface debunking, steady-state approach critique, case histories, post-liquefaction residual strength, and dense-enough criteria
+
+**Key takeaways:**
+- Static liquefaction is constitutive behaviour — no metastable collapse, no special mechanism. Pore pressures develop smoothly; the "collapse surface" is fiction
+- NorSand, calibrated on dense drained tests alone, replicates the full undrained spectrum from very loose ($\psi = +0.068$) to lightly dilatant ($\psi = -0.08$)
+- The instability locus (collapse surface) shifts with $H/I_r$ ratio — it is not a soil property but a consequence of moduli and drainage conditions
+- Peak undrained strength ratio $s_u/p'_o$ ranges from 0.15 at $\psi \approx +0.05$ to 0.30 at $\psi = 0$, consistent with Wroth's normally consolidated clay framework
+- Brittleness arises only when $\psi_o/\lambda_e > 0.7$ (beyond normal consolidation)
+- Steady-state approach has fundamental deficiencies: blended samples, cos($\phi_s$) error, localization not accounted for, lightly dilatant soils not covered
+- Post-liquefaction residual strength $s_r/\sigma'_{vo}$ from case histories (Table 6.5) follows state parameter trends separated by compressibility ($\lambda_{10}$ bands)
+- The CSD loading path (rising pore pressure at constant shear) gives negligible warning before catastrophic failure — direct parallel to rising TSF water levels at Nataka
+- Screening criterion: $\psi < -0.05$ separates "ground improvement needed" from "tolerable movements"
+- Silts behave the same as sands in the framework — use the correct CSL, no fines corrections needed
+
+## [2026-04-12] ingest | CSSM Chapter 7 — Cyclic Stress-Induced Liquefaction
+
+**Source:** `raw/cssm/Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf`, Chapter 7 (pp. 315--378)
+**Book:** *Soil Liquefaction: A Critical State Approach*, 2nd ed., Jefferies & Been (2016)
+
+**Pages created/updated:**
+- `wiki/cssm/chapter-07-cyclic-liquefaction.md` — NEW: Full chapter study notes covering cyclic mobility, principal stress rotation, experimental data, Berkeley School approach, state parameter critique and alternative, NorSand Third Axiom, Fraser River sand calibration
+
+**Key takeaways:**
+- Cyclic and static liquefaction share the same mechanism (excess pore pressure from plastic volumetric strain) but differ in generation: static requires loose state, cyclic arises from densification affecting any soil
+- Principal stress rotation is the dominant driver of cyclic pore pressure generation — more important than cyclic stress magnitude. Kinematic hardening models fail for this mechanism; only kinematic softening captures it
+- The Third Axiom: $\dot{\bar{\sigma}}_{mi}/\bar{\sigma}_{mi} = -Z_r\,\dot{\alpha}/\pi$ — yield surface shrinks with principal stress rotation, with $Z_r = 134 + 93\psi + 21\psi^2$
+- CRR normalised by $\text{CRR}_{15}$ collapses data from 13 sands onto a single fatigue-like trend. $\text{CRR}_{15}$ correlates with $\psi$ but scatter remains (fabric effects not captured by $\psi$ alone)
+- A single exponential $CRR_{7.5} = 0.06\exp(-9\psi_k)$ replaces the entire Berkeley School system of charts, fines corrections, $K_\sigma$, and $K_\alpha$ factors
+- Berkeley School deficiencies: characteristic penetration resistance undefined, soil properties neglected, fines correction has wrong mathematical form (additive vs multiplicative), $K_\sigma$ extrapolations lack theoretical basis
+- Fraser River sand full NorSand calibration: $M_{tc} = 1.45$, $N = 0.43$, $\chi_{tc} = 3.2$, $\lambda_{10} = 0.138$ — three to four times more compressible than quartz sands
+- Soil fabric is the missing variable — seismic shear modulus profiles may be the best in-situ fabric index
+- Direct relevance to Nataka TSF: earthquake screening via single $\psi$-based equation, machine-induced vibrations follow same fatigue framework, compaction targets linked to CRR

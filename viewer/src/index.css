@@ -17,6 +17,7 @@
   --domain-cssm: #8b5cf6;
   --domain-concepts: #60a5fa;
   --domain-geotech: #f97316;
+  --domain-water: #3b82f6;
   --domain-synthesis: #ec4899;
   --mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
   --sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -81,13 +82,27 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 16px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
 }
 th, td {
   border: 1px solid var(--border);
-  padding: 8px 12px;
+  padding: 10px 14px;
   text-align: left;
 }
 th {
-  background: var(--bg-secondary);
-  color: var(--text-bright);
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid var(--accent);
+}
+tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+tr:hover td {
+  background: var(--bg-hover);
 }

@@ -8,6 +8,7 @@ const domainMeta = {
   journal: { label: 'Journal', color: 'var(--domain-journal)', desc: 'Personal reflections & goals' },
   tsf: { label: 'TSF', color: 'var(--domain-tsf)', desc: 'Tailings Storage Facility' },
   geotech: { label: 'Geotech', color: 'var(--domain-geotech)', desc: 'Daily geotechnical reports' },
+  water: { label: 'Water', color: 'var(--domain-water)', desc: 'Water supply & balance' },
   kenmare: { label: 'Kenmare', color: 'var(--domain-kenmare)', desc: 'Work projects & decisions' },
   cssm: { label: 'CSSM', color: 'var(--domain-cssm)', desc: 'Critical State Soil Mechanics' },
   concepts: { label: 'Concepts', color: 'var(--domain-concepts)', desc: 'Cross-domain concepts' },

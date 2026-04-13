@@ -1,6 +1,6 @@
 ---
 title: Wiki Index
-updated: 2026-04-11
+updated: 2026-04-12
 ---
 
 # Wiki Index
@@ -31,7 +31,14 @@ A catalog of all pages in the knowledge base, organized by domain.
 - [Kenmare Moma Mining](wiki/kenmare/kenmare-moma.md) — Entity page for Kenmare Moma Mining (Mauritius) Limited. Heavy mineral sands operation at Moma, Mozambique. Full facility inventory.
 
 ## CSSM
-<!-- No pages yet -->
+
+- [Chapter 1 — Introduction](wiki/cssm/chapter-01-introduction.md) — What the book is about, the critical state approach, state parameter $\psi = e - e_c$, ten liquefaction case histories (Fort Peck, Nerlerk, Niigata, Lower San Fernando, Aberfan, Merriespruit, Molikpaq, Ackermann Lake, Wildlife Site), roadmap of ideas.
+- [Chapter 2 — Dilatancy and the State Parameter](wiki/cssm/chapter-02-dilatancy.md) — Dilatancy and critical state fundamentals, state parameter $\psi = e - e_c$, stress--dilatancy (Rowe), state--dilatancy property $\chi_{tc}$, experimental validation across 35 soils, fabric and OCR effects, determining the CSL ($\Gamma$, $\lambda$, $M_{tc}$), uniqueness of CSL, plane strain tests, general $M(\theta)$ and operational $M_i$, connections to TSF tailings characterisation.
+- [Chapter 3 — Constitutive Modelling for Liquefaction](wiki/cssm/chapter-03-constitutive-modelling.md) — Plasticity foundations (normality, yield surfaces, strain decomposition), Cam Clay and Granta Gravel from idealised dissipation, why Cam Clay fails for sands (infinity of NCL, absurd overconsolidation), NorSand model (image stress ratio, internal cap, shear-strain hardening, 7 parameters), validation against Erksak 330/0.7 sand, parameter sensitivity study, plane strain extension.
+- [Chapter 4 — Determining State Parameter In-Situ](wiki/cssm/chapter-04-state-parameter-in-situ.md) — CPT versus SPT, the inverse problem, spherical cavity expansion with NAMC model, calibration chambers (13 sands), stress normalisation ($Q_p$ dimensionless approach vs reference condition), $Q_p = k\exp(-m\psi)$ inversion, stress-level bias resolved via NorSand simulations, general inversion framework (Table 4.3), soil behaviour-type index $I_c$, screening-level assessment, Plewes method ($\lambda_{10} = F/10$), elasticity in-situ (seismic cone, SBP), horizontal geostatic stress $K_o$ measurement and importance, alternative tests (SBP, DMT, SPT database).
+- [Chapter 6 — Static Liquefaction and Post-Liquefaction Strength](wiki/cssm/chapter-06-static-liquefaction.md) — Undrained failure of loose sands from triaxial compression through simple shear, collapse surface myth debunked (smooth pore pressure generation, no metastable rearrangement), NorSand captures full undrained spectrum from drained calibrations, instability locus depends on $H/I_r$ ratio (not a soil property), steady-state approach deficiencies, Lower San Fernando Dam CPT re-analysis, post-liquefaction residual strength from case histories and NorSand localization, $\psi < -0.05$ as dense-enough screening criterion, silts treated identically via correct CSL.
+- [Chapter 7 — Cyclic Stress-Induced Liquefaction](wiki/cssm/chapter-07-cyclic-liquefaction.md) — Cyclic mobility versus static liquefaction, three forms of cyclic loading (repeated, two-way, principal stress rotation), cyclic triaxial and simple shear data on Toyoura/FRS/Nevada sands, CRR normalisation to state parameter, Berkeley School approach (Seed charts, $K_M$/$K_\sigma$/$K_\alpha$ corrections) validated and critiqued, $CRR_{7.5} = 0.06\exp(-9\psi_k)$ replaces chart system, Third Axiom (PSR softening) in NorSand, Fraser River sand full calibration, soil fabric as missing variable.
+- [Chapter 9 — Practical Implementation of Critical State Approach](wiki/cssm/chapter-09-practical-implementation.md) — Complete procedure for liquefaction engineering: field investigations (CPTu, sampling, SCPT), laboratory testing programme (minimum 3-test suite, practical 10-test programme), deriving soil properties from triaxial data ($\Gamma$, $\lambda_{10}$, $M_{tc}$, $N$, $\chi_{tc}$), data processing (strain invariants, dilation, void ratio tracking), NorSand validation via IFM, cyclic strength from CSS tests (CRR = $a - b\psi$), CPT_plot spreadsheet (4 methods for $\psi$ computation), reporting protocols. Worked example on Nerlerk 270/1 sand.
 
 ## Concepts
 

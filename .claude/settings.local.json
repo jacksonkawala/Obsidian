@@ -15,7 +15,30 @@
       "Bash(touch /Users/jacksonkawala/Documents/github/Obsidian/raw/geotech/.gitkeep)",
       "Bash(python3:*)",
       "Bash(open:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch:*)",
+      "Bash(git stash:*)",
+      "Bash(git push:*)",
+      "Bash(rm -rf .git/refs/original/)",
+      "Bash(git reflog:*)",
+      "Bash(git gc:*)",
+      "Bash(brew list:*)",
+      "Bash(pdfimages:*)",
+      "Bash(mv fig-000.png fig1.2-fort-peck-aerial.png)",
+      "Bash(mv fig-001.png fig1.13a-lower-san-fernando.png)",
+      "Bash(mv fig-002.png fig1.13b-lower-san-fernando.png)",
+      "Bash(mv fig-005.png fig1.12-seed-liquefaction-chart.png)",
+      "Bash(mv fig-006.png fig1.15-aberfan.png)",
+      "Bash(ls /Users/jacksonkawala/Documents/github/Obsidian/raw/assets/cssm/ch02/*.png)",
+      "Bash(ls -lS /Users/jacksonkawala/Documents/github/Obsidian/raw/assets/cssm/ch02/*.png)",
+      "Bash(ls -lS /Users/jacksonkawala/Documents/github/Obsidian/raw/assets/cssm/ch03/*.png)",
+      "Bash(ls:*)",
+      "Bash(node:*)",
+      "Bash(grep '\\\\$\\\\$')",
+      "Bash(grep -n '^\\\\$\\\\$' /Users/jacksonkawala/Documents/github/Obsidian/wiki/cssm/chapter-02-dilatancy.md)",
+      "Bash(grep:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/assets/cssm/ch02/fig2.1-dilatancy-concept.png)",
+      "Bash(curl:*)"
     ]
   }
 }
