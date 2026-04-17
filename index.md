@@ -1,6 +1,6 @@
 ---
 title: Wiki Index
-updated: 2026-04-12
+updated: 2026-04-17
 ---
 
 # Wiki Index
@@ -12,6 +12,10 @@ A catalog of all pages in the knowledge base, organized by domain.
 
 ## TSF
 
+- [Nataka TSF Daily Summary Report — 15 April 2026](wiki/tsf/nataka-tsf-daily-2026-04-15.md) — **Slurry surge** — 67,492 m³ received (5× the 14 Apr volume, 16,150 t solids). TSF 58% filled (revised model). Pool 24.50 mRL (Op Notes) with **three internal pool-elevation inconsistencies** in the same report. Freeboard 5.50m (Yellow). Water return 20,219 m³/d. Lift 1 still stalled; completion slipped to 24 May. TSF balance flipped to +43,385 m³/d.
+- [Nataka TSF Daily Summary Report — 14 April 2026](wiki/tsf/nataka-tsf-daily-2026-04-14.md) — **Capacity model revised** — available storage raised from 741,000t to 1,200,000t (survey needed to verify). TSF 57%/92% filled (revised/original). Pool 24.30 mRL, freeboard 5.70m (Yellow). Plant restarted — 13,049 m³ slurry received. Water return surged to 15,593 m³/d. Lift 1 still stalled at 75%, completion slipped to 23 May.
+- [Nataka TSF Daily Summary Report — 13 April 2026](wiki/tsf/nataka-tsf-daily-2026-04-13.md) — **Freeboard recovery reversed** — dropped 1.00m to 5.65m as pool rose from 23.35 to 24.35 mRL in one day. Water return collapsed to 3,638 m³/d despite 100% pump availability. Plant shut (zero slimes). Lift 1 75%, completion slipped to 21 May.
+- [Nataka TSF Daily Summary Report — 12 April 2026](wiki/tsf/nataka-tsf-daily-2026-04-12.md) — TSF 92% filled, 54 days remaining. Freeboard recovered to 6.65m (Yellow). Pool 23.35 mRL. Lift 1 76% complete, completion slipped to 19 May (17-day margin). 3A stacker washouts required field meeting — stacker relocated, remediation planned.
 - [Nataka TSF Daily Summary Report — 09 April 2026](wiki/tsf/nataka-tsf-daily-2026-04-09.md) — TSF 92% filled, 57 days remaining. Water return restored (16,249 m³/d) — pool dropping, freeboard recovering to 5.40m. Construction still suspended. Completion slipped to 16 May (20-day margin).
 - [Nataka TSF Daily Summary Report — 08 April 2026](wiki/tsf/nataka-tsf-daily-2026-04-08.md) — TSF 91% filled, 58 days remaining. Construction fully suspended (zero fill). Freeboard 5.25m (Yellow). Zero water return to pond — TSF balance surged to +52,946 m³/d. 3A stacker washouts damaging Lift 1. Completion slipped to 15 May.
 - [Nataka TSF Weekly Report — W15 2026](wiki/tsf/nataka-tsf-weekly-2026-w15.md) — Weekly summary for 1–7 Apr 2026. TSF 90% filled, 59 days remaining. Freeboard at 5.40m (Yellow TARP). Lift 1 construction disrupted by heavy rainfall.
@@ -21,12 +25,18 @@ A catalog of all pages in the knowledge base, organized by domain.
 
 ## Geotech
 
+- [Daily Geotechnical Report — 16 April 2026](wiki/geotech/daily-geotech-2026-04-16.md) — WCPC RED worsening (1.10m, sixth day). **Fresh Tails 3A washout** at relocated stacker position (retention berm narrow/short). **MSP Rejects flow-reversed in P16C** (backflow, sidewall erosion). TSF WL rose +0.20 to 24.50 mRL; another starter-wall liner stolen. Paddock 73 slight improvement (41.55). **Tails 1B marked "Safe" despite unchanged +4m variance** — contradicts 13–15 Apr assessments. Report scope reduced vs prior days (no WCPB/WCPC/SMO/Old DM Pit detail).
+- [Freeboard Update Report — 14 April 2026](wiki/geotech/freeboard-update-2026-04-14.md) — Comprehensive survey-based freeboard assessment across all facilities. Identifies seven facilities with sections below 2.0m: WCPC Water Body PT_4 at **1.05m** (6m crest), Paddock 10C at 1.25m, SMO Pond at 1.40m, SB Corner at 1.45m (3.5m crest), P73 B73_1 at **1.50m** (at 30m width), P9C at 1.50m (2.4m crest), Exit Pond at 1.60m (2m crest). TSF controlled by starter wall at 6.65m.
+- [Daily Geotechnical Report — 15 April 2026](wiki/geotech/daily-geotech-2026-04-15.md) — WCPC RED (fifth day at 1.15m). Old DM Pit NEW ORANGE ALERT (WL +500mm). BB1 stacker washout — wet tailings toward DMC pit. Paddock 73 reversed (+0.30m to 41.60 mRL). TSF WL 24.30 mRL (FB 5.70m). Multiple reporting inconsistencies identified (TSF/PDP-1 previous-day values, Float-off Pond copy-paste).
+- [Daily Geotechnical Report — 14 April 2026](wiki/geotech/daily-geotech-2026-04-14.md) — WCPC RED unchanged (1.15m). WCPA Pond dropping (38.10 mRL, -0.40m). PDP-1 WL rose 0.50m to 34.70 mRL. PDP-2 erosion worsening. Valley 3 embankment disturbed. Reporting inconsistency: WCPA section contains PDP-1 text; PDP-1 narrative/table numbers don't match.
+- [Daily Geotechnical Report — 13 April 2026](wiki/geotech/daily-geotech-2026-04-13.md) — WCPA Pond NEW RED ALERT (WL 38.50 mRL, +0.20m/day). WCPC RED improved (1.15m FB, was 0.90m). TSF WL dropped 0.45m to 23.35 mRL (FB 6.65m). Tails 1B and 2A both reverted to NOT SAFE. PDP-1/PDP-2 liners ripped off again. Another TSF liner stolen.
 - [Daily Geotechnical Report — 10 April 2026](wiki/geotech/daily-geotech-2026-04-10.md) — P73 continuing to improve (2.20m FB), but seepage daylighting at berm toe — new concern. WCPC still RED (0.90m). TSF pool dropping (24.60 mRL). Tails 1B O/F now eroding berm. Another TSF liner section stolen. PDP-2 erosion worsening.
 - [Daily Geotechnical Report — 09 April 2026](wiki/geotech/daily-geotech-2026-04-09.md) — Paddock 73 improved RED→ORANGE (1.95m). WCPC still RED (0.90m). SMO berm breach risk escalated — slumps, sea wall erosion. C1 tails WCPC concern new. Tails 2A now safe. TSF WL 24.75 mRL (+0.15). Liner theft continues at PDP-1, PDP-2.
 - [Daily Geotechnical Report — 08 April 2026](wiki/geotech/daily-geotech-2026-04-08.md) — Full site inspection. RED ALERT at WCPC (0.90m) and Paddock 73 (1.70m). Liner theft at PDP-1, PDP-2, TSF starter wall. Tails 2A not safe. Seepage at TSF Lift 2 toe.
 
 ## Kenmare
 
+- [PDP/TSF Automation Project](wiki/kenmare/pdp-tsf-automation.md) — 12-action programme to centralise SCADA monitoring and automate pump/water level control. 5/12 complete. Critical path: flow meter and TSF comms procurement (lead times to Jun 2026).
 - [TODO — Week of 13 April 2026](wiki/kenmare/todo-2026-04-13.md) — OMS Manual (80%), TMS document (65%), GISTM audit distribution, site drive-around with external geotechnical auditor.
 - [Kenmare Moma Mining](wiki/kenmare/kenmare-moma.md) — Entity page for Kenmare Moma Mining (Mauritius) Limited. Heavy mineral sands operation at Moma, Mozambique. Full facility inventory.
 

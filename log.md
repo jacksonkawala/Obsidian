@@ -1,12 +1,203 @@
 ---
 title: Wiki Log
-updated: 2026-04-12
+updated: 2026-04-17
 
 ---
 
 # Wiki Log
 
 Chronological record of wiki operations.
+
+## [2026-04-17] ingest | Daily Geotechnical Report 16-04-2026
+
+**Source:** `raw/geotech/Daily Geotechnical Report 16_04_2026.pdf` (20 pages)
+**Report:** Daily Geotechnical Report, Ref 086/GTC/2026, 16-04-2026 (06:00–11:00)
+
+**Pages created/updated:**
+- `wiki/geotech/daily-geotech-2026-04-16.md` — NEW: Full report summary with freeboard chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: pool rising (24.30→24.50 mRL), fresh 3A washout, another starter-wall liner stolen, 6th day WCPC Red
+- `wiki/kenmare/kenmare-moma.md` — UPDATED: WCPC deteriorating, MSP Rejects P16C flow reversal, stacker status, Tails 1B data-quality concern
+
+**Key findings:**
+- **WCPC RED — sixth consecutive day, deteriorating** — freeboard dropped to 1.10 m (was 1.15 m held for five days). WL 9.90 mRL.
+- **Fresh Tails 3A washout** at the relocated stacker position. Retention berm at new position is both narrow and short, with an access road along its base — HME bogging risk. Operations halted.
+- **MSP Rejects cascade:** MSP Rejects redirected to Paddock 16C on 15 Apr (after Old DM Pit Orange alert) have now accumulated enough to reverse flow direction, causing backflow and sidewall erosion in P16C within 24 hours. Discharge to be reallocated again.
+- **TSF WL rose +0.20 m** (24.30→24.50 mRL) after the 67,492 m³ slurry receipt on 15 Apr. Freeboard 5.50 m (Yellow).
+- **Another TSF starter wall liner section stolen** — continues relentless theft pattern. Port-sidewall liners on PDP-1 and PDP-2 also ripped off again (same day).
+- **Paddock 73 slight improvement** — 41.55 mRL, −0.05 m after the 15 Apr reversal. Seepage at Berm 73 toe continues.
+- **PDP-2 erosion worsening** — starboard near slimes boosters and adjacent to Berm 75 both getting worse. Pipeline leaks from PDP-1/Berm 75 present dual embankment-breach/pipeline-integrity risk.
+- **Tails 1B data-quality concern:** Report marks "Safe to Operate = Yes" despite stacking point +4 m above safe, base +2.5 m, roping at U/F, and O/F eroding berm — geometry values unchanged from 13–15 Apr when the stacker was consistently marked NOT SAFE.
+- **Scope reduction vs prior reports:** No detailed coverage for WCPB, WCPC, SMO, Paddock 9C, Paddock 16C, Old DM Pit, Exit Pond, Starboard Side Corner, Paddocks 58/68/60/66/69 — all routinely covered in 08–15 Apr reports.
+
+## [2026-04-17] ingest | Nataka TSF Daily Summary Report 15-04-2026
+
+**Source:** `raw/tsf/Kenmare_TSF_Summary_Report 15042026.pdf` (9 pages)
+**Report:** Nataka TSF Daily Summary Report, Ref 48/TSF/2026, 15-04-2026 (Week 16)
+
+**Pages created/updated:**
+- `wiki/tsf/nataka-tsf-daily-2026-04-15.md` — NEW: Daily TSF summary with freeboard trend chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: 58% filled, slurry surge, water balance, freeboard dropped to 5.50 m
+
+**Key findings:**
+- **Slurry surge** — 67,492 m³ received on 15 Apr vs 13,049 m³ on 14 Apr (5× increase). Approx 16,150 t solids added, bringing total-to-date to 696,764 t (58% of revised 1,200,000 t capacity).
+- **Water return continues to strengthen** — 20,219 m³/d (up from 15,593 on 14 Apr, 3,638 on 13 Apr). All four pumps at 100%.
+- **Freeboard dropped** to 5.50 m (Yellow) from 5.70 m — driven by the slurry receipt outpacing return.
+- **Lift 1 stalled** — zero fill placed for third consecutive day; completion slipped one more day to **24 May 2026**. ADTs loading sand for access (not placing fill).
+- **Three internal pool-elevation inconsistencies in the same report:** Section 1 summary table implies 24.35 mRL; Operational Notes "Pool level: 24.50 mRL"; Section 4 Freeboard table "Pool elevation 24.70 mRL". The 5.50 m FB is consistent with 24.50 mRL (Op Notes value) — 24.70 is almost certainly a typo.
+- **Supernatant Pump 1 listed twice** in the Return Water table (second row should be Pump 2).
+- **Cross-report reconciliation:** 15 Apr geotech morning reading TSF WL 24.30 mRL; 15 Apr TSF summary Pool 24.50–24.70 mRL; 16 Apr geotech morning reading 24.50 mRL. The pool rose +0.20 m during 15 Apr (morning-to-late) and held into 16 Apr morning.
+- **Water balance — TSF now net-accumulating:** TSF +43,385 m³/d (inflow 67,492 from PDP, outflow 20,219 to Pond + 3,888 seepage). PDP −60,764; WCPA Pond +30,915.
+- Phase 1 capacity date unchanged at 20 July 2026. Bathymetric survey remains urgently needed.
+
+## [2026-04-16] ingest | Freeboard Update Report — 14 April 2026
+
+**Source:** `raw/geotech/Freeboard Update Report_WCPA_WCPB_WCPC_SMO_14_04_2026.pdf` (18 pages)
+**Report:** Freeboard Update Report, Ref 09/WFR/2026, 14-04-2026. Survey-based section-by-section freeboard data for all facilities.
+
+**Pages created/updated:**
+- `wiki/geotech/freeboard-update-2026-04-14.md` — NEW: Comprehensive freeboard assessment with minimum-freeboard chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: added freeboard report link, confirmed TSF starter wall as controlling section
+- `wiki/kenmare/kenmare-moma.md` — UPDATED: added freeboard report context for WCPC, SMO, Exit Pond concerns
+
+**Key findings:**
+- **Seven facilities have sections below 2.0 m freeboard:**
+  - WCPC Water Body PT_4: **1.05 m** (6 m crest, 9.95 mRL WL) — lowest on entire site, explains persistent RED ALERT
+  - Paddock 10C Sec_6: **1.25 m** (7 m crest) — now receiving redirected MSP Rejects
+  - SMO Pond Sec_6: **1.40 m** (16 m crest) — confirms berm breach risk
+  - Starboard Side Corner Stb_2: **1.45 m** (3.5 m crest) — pinch point
+  - Paddock 73 B73_1 at 30m width: **1.50 m** (crest 3.50 m, drops to 1.50 m at 30m width) — seepage at toe of this section
+  - Paddock 9C 9C_3: **1.50 m** (2.4 m crest) — extremely narrow
+  - Exit Pond Sec_2: **1.60 m** (2.0 m crest) — knife-edge containment
+- **TSF controlled by starter wall (Sec_3)** at 6.65 m freeboard, 15 m crest width, 30 mRL crest elevation. Other three sides are natural hillsides at 42–72 m.
+- **WCPA controlled by STB_1** at 2.80 m (at 30m width) — starboard sidewall
+- **Survey confirms TSF WL at 23.35 mRL** — matches 13 Apr geotech morning reading, not the 24.35 from TSF daily summary
+- **Survey dates range** from Sep 2025 to Apr 2026 — older surveys may not reflect current geometry
+
+## [2026-04-16] ingest | Daily Geotechnical Report 14-04-2026
+
+**Source:** `raw/geotech/Daily Geotechnical Report 14_04_2026.pdf` (20 pages)
+**Report:** Daily Geotechnical Report, Ref 084/GTC/2026, 14-04-2026 (06:00–11:00)
+
+**Pages created/updated:**
+- `wiki/geotech/daily-geotech-2026-04-14.md` — NEW: Full report summary with freeboard chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: PDP-1 WL rising sharply, WCPA dropping, liner theft continues
+- `wiki/kenmare/kenmare-moma.md` — UPDATED: WCPA recovering, PDP-1 rising, PDP-2 stable
+
+**Key findings:**
+- **WCPC RED ALERT unchanged** — 1.15 m freeboard for fourth consecutive day
+- **WCPA Pond WL dropping** — 38.10 mRL (-0.40 m from 13 Apr). Red Alert easing.
+- **PDP-1 WL rose sharply** — 34.70 mRL (+0.50 m). Port sidewall liner ripped off again.
+- **PDP-2 starboard erosion worsening** — pipeline leakage from PDP-1/Berm 75 remains dual risk
+- **TSF WL 24.35 mRL (unchanged)** — freeboard 5.65 m. Liner theft, seepage, pipeline hanging continue.
+- **Tails 1B and 2A still NOT SAFE** — 1B at +4 m above safe (washing/roping), 2A at +2 m
+- **Reporting inconsistency:** WCPA PWL section contains PDP-1 text (copy-paste error); PDP-1 narrative (34.30→34.80) doesn't match table data (34.20→34.70)
+
+## [2026-04-16] ingest | Daily Geotechnical Report 15-04-2026
+
+**Source:** `raw/geotech/Daily Geotechnical Report 15_04_2026.pdf` (20 pages)
+**Report:** Daily Geotechnical Report, Ref 085/GTC/2026, 15-04-2026 (06:00–11:00)
+
+**Pages created/updated:**
+- `wiki/geotech/daily-geotech-2026-04-15.md` — NEW: Full report summary with freeboard chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: Old DM Pit Orange Alert, BB1 washout, P73 reversal
+- `wiki/kenmare/kenmare-moma.md` — UPDATED: all latest facility statuses, BB1 stacker, Old DM Pit
+
+**Key findings:**
+- **WCPC RED ALERT** — 1.15 m freeboard for fifth consecutive day
+- **Old DM Pit NEW ORANGE ALERT** — WL rose 500 mm (20.70→21.20 mRL). MSP Rejects redirected to Paddock 16C.
+- **BB1 stacker washout (new issue)** — wet tailings flowing toward DMC pit. Retention berm to be built. O/F hose leak at footing base repaired.
+- **Paddock 73 REVERSED** — WL jumped to 41.60 mRL (+0.30 m) after sustained improvement (42.00→41.30 over preceding days). Berm 73 freeboard dropped to 2.10 m.
+- **TSF WL 24.30 mRL** — slight drop from 24.35. Freeboard 5.70 m (slight recovery).
+- **Multiple reporting inconsistencies:** TSF previous day shows 23.35 (should be 24.35); PDP-1 previous day shows 34.30 (14 Apr was 34.70); Float-off Pond data appears copy-paste from 14 Apr.
+
+## [2026-04-16] ingest | Nataka TSF Daily Summary Report 13-04-2026
+
+**Source:** `raw/tsf/Kenmare_TSF_Summary_Report 13042026.pdf` (9 pages)
+**Report:** Nataka TSF Daily Summary Report, Ref 46/TSF/2026, 13-04-2026
+
+**Pages created/updated:**
+- `wiki/tsf/nataka-tsf-daily-2026-04-13.md` — NEW: Daily TSF summary with freeboard trend chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: freeboard reversal, pool rise, pump return collapse
+
+**Key findings:**
+- **Freeboard recovery sharply reversed** — dropped 1.00 m from 6.65 m (12 Apr) to 5.65 m (13 Apr). Pool rose from 23.35 to 24.35 mRL in one day.
+- **Cross-report discrepancy:** 13 Apr geotech report (morning inspection) shows TSF WL at 23.35 mRL, but this TSF daily summary shows 24.35 mRL. A 1.0 m discrepancy for the same day.
+- **Water return collapsed** to 3,638 m³/d (from 16,249 on 09 Apr) despite 100% pump availability
+- TSF 92% filled, 53 days remaining, construction stalled at 0 m³ fill
+- Lift 1 completion slipped to 21 May (was 19 May)
+- 3A stacker washouts: stacker relocated, retention berms under construction, liquefied tailings eroding Lift 1
+
+## [2026-04-16] ingest | Nataka TSF Daily Summary Report 14-04-2026
+
+**Source:** `raw/tsf/Kenmare_TSF_Summary_Report 14042026.pdf` (9 pages)
+**Report:** Nataka TSF Daily Summary Report, Ref 47/TSF/2026, 14-04-2026
+
+**Pages created/updated:**
+- `wiki/tsf/nataka-tsf-daily-2026-04-14.md` — NEW: Daily TSF summary with freeboard trend chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: capacity model revised, plant restarted, water return surged, completion slipped further
+
+**Key findings:**
+- **TSF capacity model revised** — available storage raised from 741,000 t to 1,200,000 t (based on assumed dry density and calibrated models). Remaining capacity jumped from 53 to 97 days. Phase 1 capacity date moved from 05 Jun to 20 Jul. **Bathymetric survey urgently required to verify.**
+- **Plant restarted** — 13,049 m³ slurry received (first deposition after plant shutdown)
+- **Water return surged** to 15,593 m³/d (up fourfold from 3,638 on 13 Apr)
+- **Freeboard stabilising** — 5.70 m (slight recovery from 5.65 m dip). Pool 24.30 mRL (-0.05 m).
+- **WCPA balance flipped massively positive** — +49,856 m³/d (driven by PDP→Pond 114,000 m³/d inflow and new Finishing Pond C pumping 16,800 m³/d). However, WCPA pond WL is actually dropping, suggesting volumes may contain estimation errors.
+- Lift 1 completion slipped to 23 May (was 21 May). Still zero fill.
+
+## [2026-04-14] ingest | Daily Geotechnical Report 13-04-2026
+
+**Source:** `raw/geotech/Daily Geotechnical Report 13_04_2026.pdf` (20 pages)
+**Report:** Daily Geotechnical Report, Ref 083/GTC/2026, 13-04-2026 (06:00–11:00)
+
+**Pages created/updated:**
+- `wiki/geotech/daily-geotech-2026-04-13.md` — NEW: Full report summary with freeboard chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: TSF WL 23.35 mRL (-0.45 m), freeboard 6.65 m, WCPA Red Alert, liners stolen again
+- `wiki/kenmare/kenmare-moma.md` — UPDATED: WCPA RED, WCPC improved, Tails 1B/2A NOT safe, PDP-1/2 liners ripped off, Float-off Pond rising
+
+**Key findings:**
+- **WCPA Pond NEW RED ALERT** — WL rose 300 mm in 24 hrs (38.30 → 38.50 mRL, freeboard 2.70 m). TSF pumps off, slimes to PDP-1, MSP Rejects diverted to RWD.
+- **WCPC RED improved** — freeboard up to 1.15 m from 0.90 m, still non-compliant
+- **TSF WL dropped significantly** — 23.35 mRL (down 0.45 m), freeboard recovered to 6.65 m
+- **Tails 1B and 2A both reverted to NOT SAFE** — 1B stacking 4 m above safe level, 2A stacking 2 m above safe level
+- **PDP-1 and PDP-2 port sidewall liners ripped off again** — another TSF starter wall section also stolen
+- **3A stacker washouts** — wet tailings eroding Lift 1, stacker relocated, retention berms under construction
+- **PDP-2 pipeline leaks** — dual risk of embankment breach and pipeline integrity loss
+
+## [2026-04-14] ingest | Nataka TSF Daily Summary Report 12-04-2026
+
+**Source:** `raw/tsf/Kenmare_TSF_Summary_Report 12042026.pdf` (9 pages)
+**Report:** Nataka TSF Daily Summary Report, Ref 45/TSF/2026, 12-04-2026
+
+**Pages created/updated:**
+- `wiki/tsf/nataka-tsf-daily-2026-04-12.md` — NEW: Daily TSF summary with freeboard trend chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: 92% filled, 54 days remaining, freeboard 6.65 m, Lift 1 76%, completion slipped to 19 May
+
+**Key findings:**
+- **Freeboard recovering strongly** — from 5.3 m at start of week to 6.65 m by 13 Apr. Pool dropped to 23.35 mRL.
+- **TSF 92% filled, 54 days remaining** (was 57 days on 09 Apr)
+- **Lift 1 76% complete**, est. completion slipped to 19 May (17-day margin to Phase 1 capacity)
+- **Construction rate near zero** — only 1,260 m³ fill, 7-day average 180 m³
+- **Water balance reversed** — TSF in net outflow (-3,888 m³/d), but WCPA pond at +28,494 m³/d from RAW Dam and Finishing Pond C
+- **Zero inter-system water transfers** on reporting day
+- **Bathymetric survey still urgently needed** for QPO review
+- **Plant shut** — zero slimes received on 12 Apr
+
+## [2026-04-14] ingest | PDP/TSF Automation Project
+
+**Source:** `raw/kenmare/PDP_automation_project.pdf` (2 pages)
+**Content:** Email chain (Monteiro Junior, 26 Mar and 01 Apr 2026) with action tracker for PDP/TSF Automation Project
+
+**Pages created/updated:**
+- `wiki/kenmare/pdp-tsf-automation.md` — NEW: Entity page for the automation project with full action tracker
+- `wiki/kenmare/kenmare-moma.md` — UPDATED: added automation project link to active issues
+
+**Key findings:**
+- 12-action programme to centralise SCADA monitoring and automate pump/water level control at PDP and TSF
+- 5 of 12 actions completed (SCADA operator training, hardware, booster pump auto mode, network setup)
+- Critical path driven by procurement lead times: flow meters (08 Jun) and TSF comms interface (20 May)
+- Control room container delayed — crane reassigned to WCPB breakdown
+- E-stop bypass being considered as countermeasure to cable theft
+- Directly addresses the manual monitoring gaps that contributed to the April 2026 water crisis
 
 ## [2026-04-09] init | Wiki initialized
 
