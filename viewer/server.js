@@ -59,7 +59,7 @@ app.get('/api/pages/:domain/:slug', async (req, res) => {
     const content = await fs.readFile(filePath, 'utf-8');
     const { data, content: body } = matter(content);
     res.json({ frontmatter: data, content: body, path: `wiki/${domain}/${slug}.md` });
-  } catch (err) {
+  } catch {
     res.status(404).json({ error: 'Page not found' });
   }
 });
@@ -95,7 +95,7 @@ app.get('/api/sources/:domain', async (req, res) => {
     const files = await fs.readdir(dir);
     const sources = files.filter(f => f !== '.gitkeep');
     res.json(sources);
-  } catch (err) {
+  } catch {
     res.status(404).json({ error: 'Domain not found' });
   }
 });
@@ -142,7 +142,7 @@ app.get('/api/data/:filename', async (req, res) => {
   try {
     const content = await fs.readFile(filePath, 'utf-8');
     res.json(JSON.parse(content));
-  } catch (err) {
+  } catch {
     res.status(404).json({ error: 'Data file not found' });
   }
 });

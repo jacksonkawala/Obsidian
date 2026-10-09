@@ -1,12 +1,208 @@
 ---
 title: Wiki Log
-updated: 2026-04-17
+updated: 2026-05-01
 
 ---
 
 # Wiki Log
 
 Chronological record of wiki operations.
+
+## [2026-04-25] ingest+audit | TSF 21-23 Apr + Geotech 22-24 Apr + highlight rendering
+
+**Sources:**
+- `raw/tsf/Kenmare_TSF_Summary_Report 21042026.pdf`
+- `raw/tsf/Kenmare_TSF_Summary_Report 22042026.pdf`
+- `raw/tsf/Kenmare_TSF_Summary_Report 23042026.pdf`
+- `raw/geotech/Daily Geotechnical Report 22_04_2026.pdf`
+- `raw/geotech/Daily Geotechnical Report 23_04_2026.pdf`
+- `raw/geotech/Daily Geotechnical Report 24_04_2026.pdf`
+
+**Pages created:**
+- `wiki/tsf/nataka-tsf-daily-2026-04-21.md`
+- `wiki/tsf/nataka-tsf-daily-2026-04-22.md`
+- `wiki/tsf/nataka-tsf-daily-2026-04-23.md`
+- `wiki/geotech/daily-geotech-2026-04-22.md`
+- `wiki/geotech/daily-geotech-2026-04-23.md`
+- `wiki/geotech/daily-geotech-2026-04-24.md`
+
+**Pages updated:**
+- `wiki/tsf/nataka-tsf.md` — rolled current status to 24 Apr / 23 Apr TSF summary: 63% filled, 5.30 m freeboard, Tails 3A still overtopping and eroding Lift 1.
+- `wiki/kenmare/kenmare-moma.md` — added latest operational update for WCPC plant beaching, WCPB HTC/Lake Johari backflow risk, Old DMB Red sequence, and persistent data-quality issues.
+- `index.md` — added six new report pages and updated date.
+- `log.md` — this entry.
+- `CLAUDE.md` and `AGENTS.md` — added highlight convention so future ingests mark critical alert phrases and Highlights sections consistently.
+- `viewer/src/components/MarkdownRenderer.jsx` and `.css` — critical headings, bold alert phrases, and alert table cells now render red with a glow.
+
+### Claude Ingest Audit
+
+Claude's 17-21 Apr ingest captured the major operational chain correctly: WCPC Red-to-Orange, Old DMB escalation, Paddock 73 recovery, Tails 1B safety-flag anomaly, Paddock 9C stale readings, TSF pool/freeboard contradictions, and Tails 3A overtopping through 21 Apr. The main gap was not quality but incompleteness: the ingest stopped before the 21-23 Apr TSF summaries and 22-24 Apr geotech reports.
+
+### Key Findings Added
+
+- **Tails 3A remains unresolved through 24 Apr.** The retention berm is still overtopping and wet tailings are still eroding / encroaching on Lift 1 sidewall.
+- **WCPC plant became beached / non-operational.** On 24 Apr the WCP-C Dredge Pond was raised to **10.50 mRL** to refloat the plant; the report says water should not exceed 10.50 mRL and dewatering must follow relocation.
+- **WCPC Water Body remains Orange but critical** at 9.60 mRL and 1.40 m freeboard through 24 Apr.
+- **Old DMB Red Alert persisted 21-23 Apr** at 21.50 mRL / 1.50 m freeboard, then improved to 21.35 mRL / 1.65 m on 24 Apr while still called Red.
+- **WCPB HTC discharge adds a Lake Johari backflow risk** from 22 Apr onward.
+- **SMO berm mining by HME** was flagged on 22 Apr; berm reinstatement and barricading recommended.
+- **MSP Rejects in Paddock 16C** continue building toward berm elevation, with backflow/overtopping risk.
+- **TSF filled fraction advanced to 63%** by 23 Apr; freeboard moved 5.40 (21-22) → 5.30 (23-24).
+- **Data-quality issues continued:** duplicate TSF Ref 53 on 21/22 Apr, §4 date stuck at 21/04 in 22/23 Apr TSF summaries, Supernatant Pump 1 duplicated, 23 Apr slimes-vs-water-received mismatch, PDP-1 blank fields on 23/24 Apr, WCPB Starboard Corner blank table on 22 Apr, and Paddock 9C stuck at 17.00 mRL.
+
+## [2026-04-21] ingest+audit | Daily Geotech 21 Apr 2026
+
+**Source:** `raw/geotech/Daily Geotechnical Report 21_04_2026.pdf` (44 pages)
+**Report:** Daily Geotechnical Report, Ref 090/GTC/2026, 21-04-2026 (06:00–11:00)
+
+**Also present but not ingested:** `raw/geotech/TSF_Wk21042026.pptx` — PPTX is currently open in PowerPoint (only the `~$` Office lock file is on disk; the main file is not yet saved). User explicitly asked to skip this source for now; revisit once the PPTX is saved and closed.
+
+**Pages created/updated:**
+- `wiki/geotech/daily-geotech-2026-04-21.md` — NEW: full report summary with facility-freeboard chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: status rolled to 21 Apr; WCPC downgrade, Old DMB Red, pool 24.70/24.75 contradiction, Tails 1B sixth day, Tails 3A still overtopping
+- `wiki/kenmare/kenmare-moma.md` — UPDATED: all facility statuses refreshed to 21 Apr including Old DMB Red, WCPC Orange, WCP-C Dredge Pond rising, Paddock 73 fully recovered, Paddock 9C seventh stale day
+- `index.md` — UPDATED: added 21 Apr geotech entry to Geotech section
+
+### Key Findings (operational)
+
+- **Old DMB Pit RED ALERT — first day.** WL +0.35 m to 21.50 mRL; Berm 12C freeboard 1.50 m (Red). Inflows ceased; MSP Rejects rerouted to Paddock 16C. Non-Compliance row contradicts by reading "None."
+- **WCPC Water Body downgraded Red → Orange.** First alert-level improvement after at least 10 consecutive Red days. WL 9.60 mRL (−0.20), port-sidewall FB 1.40 m. Narrative still "critical."
+- **Tails 3A retention berm still overtopping** on 21 Apr — unresolved from 20 Apr. Plant on shut; liquefaction and HME risks called out.
+- **TSF WL 24.70 mRL per §4 table, narrative says 24.75 mRL** — new intra-report contradiction on a single data point.
+- **Paddock 73 fully recovered** from 18 Apr Orange Alert — WL 41.85 → 40.80 mRL over four days; Berm 73 FB back to 2.90 m. Toe seepage continues under monitoring.
+- **SMO front-berm FB climbing back**: 0.90 m (18 Apr) → 1.20 m (20 Apr) → 1.30 m (21 Apr). Separation-berm slumps still present.
+- **WCPB Starboardside Corner Red** unchanged at 14.50 mRL across five readings (17, 18, 20, 21 Apr and prior).
+- **Old DMB / Paddock 11C separation-berm erosion** persistent 17, 18, 20, 21 Apr; now compounded by Red Alert on Old DMB itself.
+- **Paddock 61 emergency pipes** still burnt — not reinstated across 17, 18, 20, 21 Apr despite repeated remedial agreement.
+
+### Cross-Report Inconsistencies Audit (21 Apr)
+
+New issues surfaced or continued from prior audit:
+
+1. **TSF WL narrative vs table mismatch** (new on 21 Apr) — Highlights text "currently at 24.75 mRL" vs §4 table "today 24.70 / previous 24.75, change −0.05."
+2. **TSF Non-Compliance row "None"** while narrative explicitly demands liner reinstatement, pipeline repositioning, wall rehabilitation — now fourth consecutive report (18, 20, 21 Apr).
+3. **Old DMB Pit Non-Compliance row "None" despite Red Alert** (21 Apr) — same pattern; tick-box cell not wired to alert escalation.
+4. **WCPC Water Body "halt all inflows" recommendation still not acted on** — HMC stacker remains the listed inflow across 18, 20, 21 Apr (four consecutive reports).
+5. **PDP-1 and PDP-2 liner-theft paragraphs verbatim identical** — fourth consecutive report with the same copy-paste (18, 20, 21 Apr).
+6. **110 kV pole erosion text duplicated** under WCP-A Dredge Pond and PDP-1 — unchanged pattern.
+7. **Paddock 9C "WL to be confirmed"** for seventh consecutive reading (15–21 Apr) at unchanged 17.00 mRL. Inspection appears to have paused on this paddock.
+8. **Tails 1B marked Safe with +4 m stacking-point variance for sixth consecutive inspection** (16, 17, 18, 20, 21 Apr). Asymmetric with BB2 (+1.60 m berm-height variance → Orange). Systematic, not transient.
+9. **"Managers informed" colour shading inconsistent** — red for WCPC Water Body and WCPB Corner; orange for Paddock 73; yellow for ISOA. No legend.
+10. **No §4 "Priority actions for the week" table on 21 Apr** — 17 Apr report carried this block; 21 Apr omits it. Template inconsistency.
+11. **No Finishing Pond standalone table on 21 Apr** — only referenced as a WCPA inflow source. Omission vs 20 Apr.
+12. **BB1 return-water migration concern** — 17 Apr standalone narrative replaced by embedded remark in BB1 / BB1_Kwale stacker rows on 21 Apr: "construct retention berm to prevent water/slurry migration towards DMC pit." Still unresolved, now less prominent.
+13. **Tails 3B photo-only** with no geometry or commentary — consistent across recent reports.
+14. **Float-off Pond "Safe to operate" shown yellow** despite green freeboard cells — unexplained colour coding.
+
+## [2026-04-21] ingest+audit | Daily Geotech 18 & 20 Apr + TSF 17, 19 & 20 Apr
+
+**Sources:**
+- `raw/geotech/Daily Geotechnical Report 18_04_2026.pdf` (44 pages)
+- `raw/geotech/Daily Geotechnical Report 20_04_2026.pdf` (44 pages; 19 Apr geotech not issued)
+- `raw/tsf/Kenmare_TSF_Summary_Report 17042026.pdf` (Ref 50/TSF/2026)
+- `raw/tsf/Kenmare_TSF_Summary_Report 19042026.pdf` (Ref 51/TSF/2026; 18 Apr TSF not issued)
+- `raw/tsf/Kenmare_TSF_Summary_Report 20042026.pdf` (Ref 52/TSF/2026)
+
+**Pages created:**
+- `wiki/tsf/nataka-tsf-daily-2026-04-17.md`
+- `wiki/geotech/daily-geotech-2026-04-18.md`
+- `wiki/tsf/nataka-tsf-daily-2026-04-19.md`
+- `wiki/geotech/daily-geotech-2026-04-20.md`
+- `wiki/tsf/nataka-tsf-daily-2026-04-20.md`
+
+**Pages updated:**
+- `wiki/tsf/nataka-tsf.md` — current status rolled to 20 Apr; Key Concerns restructured around WCPC (≥day 10), Old DM Pit new Orange, Tails 3 retention berm overtopped, Paddock 73 Orange-then-recovered, SMO escalation, Lift 1 resumption (29 May completion, 52-day margin); 20 Apr water balance table.
+- `wiki/kenmare/kenmare-moma.md` — facility statuses refreshed to 20 Apr; stacker narratives extended with Tails 3 overtopping, BB1 concern status unclear, C1 tails O/E "Not Safe" flag, HTC backflow risk, SMO S1 wording change.
+- `index.md` — added 17, 19, 20 Apr TSF and 18, 20 Apr geotech entries.
+
+### Cross-Report Logical Inconsistencies Audit
+
+Findings summarised from the five-report chain (17–20 Apr) and cross-checked against earlier entries (08–16 Apr):
+
+1. **Pool-elevation multi-value bug (persistent, structural).** The TSF summary reports from 15, 17, 19, and 20 Apr each contain two or three different pool elevations within the same document: the Section 1 summary-table "pool elevation basis" for freeboard, the §2 Operational Notes, and the §4 Pool/Freeboard table. Typical discrepancies 0.10–0.65 m. Pattern: the summary-table row is not refreshed when §4 is updated. **17 Apr** summary table shows 24.6 mRL / 5.4 m but §4 shows 24.10 / 5.90 m. **19 Apr** summary table shows 24.6 / 5.4 but §4 shows 24.75 / 5.25. **20 Apr** has three values (24.70 / 24.75 / 24.80).
+2. **"Supernatant Pump 1" duplicated in Return Water table** — six consecutive TSF summaries (15, 16, 17, 19, 20 Apr) with the same copy-paste bug; second row should be Pump 2.
+3. **§4 header date runs one day ahead of report date** — 17 Apr says 18/04, 19 Apr says 20/04, 20 Apr says 21/04 — systematic template error.
+4. **Cover-page aerial dated 18-03-2026** across 17, 19, 20 Apr TSF summaries — one month stale on the template image.
+5. **PDP mass-balance gap** — 17, 19, and 20 Apr TSF water-balance tables show **zero reported PDP inflows** (WCP-A→PDP = 0, P73→PDP = 0, makeup = 0) while PDP has large outflows to TSF plus seepage. On 19 Apr the implied balance is −55,193 m³/d. But the 18, 20 Apr geotech inspections confirm PDP-1 WL unchanged at 34.00 mRL and PDP-2 unchanged at 31.90 mRL — so the ponds are not actually draining. Conclusion: an unmetered inflow (likely raw water) exists and is missing from the table. Three reports now with this gap.
+6. **Tails 1B safety-flag anomaly** — now fifth day (16, 17, 18 Apr; 19 Apr geotech not issued; 20 Apr) marked "Safe to Operate = Yes" despite unchanged +4.00 m stacking-point, +2.50 m base, and +1.50 m berm-height variances with roping at U/F and O/F eroding the berm. 13, 14, 15 Apr reports with identical geometry flagged NOT SAFE. Asymmetric with BB2, where +1.60 m berm-height variance alone drew the Orange flag. Systematic assessment change or safety-logic misalignment, not a transient data error.
+7. **TSF pool trajectory invisible from any single source.** Reconstruction requires three reports: 18 Apr geotech (24.10 mRL), 19 Apr TSF summary "prev day = 5.70 m" implying ~24.30 mRL, 19 Apr TSF "today = 24.75 mRL", 20 Apr TSF §4 = 24.70 mRL. Combined: 24.10 → ~24.30 → 24.75 → 24.70 across 18–20 Apr. No single report shows the full sequence.
+8. **TSF alert threshold asymmetry.** A +0.45 m single-day pool rise on 20 Apr (24.30 → 24.75 mRL implied) was not called out as an alert, while Old DM Pit's +0.15 m rise the same day triggered an Orange Alert narrative. The asymmetry reflects that TSF freeboard (5.25–5.30 m) is still Yellow while Old DM Pit crossed a hard max-allowable limit, but the contrast is worth flagging to the inspection team.
+9. **MSP Rejects now a closed loop.** Discharge: Old DM Pit → redirect OUT 15 Apr (Orange) → cascade into P16C 16–18 Apr (backflow, sidewall erosion) → **recommended BACK to P16C 20 Apr** (Old DM Pit re-entered Orange). No stable destination has been identified.
+10. **BB1 stacker return-water migration concern (17 Apr)** — raised as a breach risk in 17 Apr narrative but not repeated in BB1 sections of 18 or 20 Apr. Status unclear: unresolved, or dropped from report scope. Worth explicit resolution in next inspection.
+11. **Paddock 9C "WL to be confirmed"** — the same 17.00 mRL value across six consecutive readings (15–20 Apr); "WL to be confirmed" caveat appears on every edition. Almost certainly a stale reading.
+12. **20 Apr geotech WL changes show 0.00 across most facilities** (PDP-1, PDP-2, P72, P73, P9C, P16C, ISOA, ExtP7, Float-off, Finishing, Exit, WCPB Pond, WCPB Corner, WCPC Dredge Pond, SMO) where "Previous Day" refers to 18 Apr — plausible for stable ponds but suspicious for active ones. Trend charts, however, show 7 data points through 20 Apr, implying daily readings were taken on 19 Apr even though no 19 Apr geotech PDF was issued.
+13. **Paddock 73 trajectory discontinuity.** 18 Apr: 41.85 mRL (Orange). 20 Apr: 40.90 mRL with "Change = 0.00". The ~0.95 m drawdown happened within the reporting gap and isn't captured as a trend metric in the 20 Apr report. Misleading if read without the 18 Apr report at hand.
+14. **18 Apr and 20 Apr geotech — PDP-1 and PDP-2 liner-theft paragraphs verbatim identical** on both pages. Either both facilities genuinely had theft events on the same day, or one paragraph was carried over in error. Pattern repeated across both reports.
+15. **TSF Non-Compliance row "None" on 18 and 20 Apr geotech** while the narrative calls for liner reinstatement and pipeline repositioning — tick-box contradicts prose.
+16. **Tails outflow step-change on 20 Apr.** TSF summary 16, 17, 19 Apr water balance all show Tails = 66,865 m³/d. 20 Apr shows 20,979 m³/d — a 3× drop with no narrative support. Either plant throughput stepped down sharply or one of the editions has an arithmetic/copy error.
+17. **WCPA water balance +44,927 m³/d on 20 Apr** with inflows ~69,693 vs outflows ~24,767 — a large positive imbalance suggesting missing outflows or double-counted inflows; should close against the 16 Apr +43,533 benchmark.
+18. **WCPC Water Body inflows still list HMC stacker** across 17, 18, 20 Apr despite the remedial recommendation to halt all inflows — the recommendation has not been acted on.
+19. **Lift 1 fill-to-date arithmetic.** 19 Apr reports 245,830 m³ (after +600 overnight). 20 Apr still shows 245,830 m³ despite reporting a 1,370 m³ day+night fill. Either fill-to-date was not refreshed or today's fill was not yet rolled in.
+20. **Finishing Pond C** mentioned in 16 Apr TSF balance but **absent from 17, 19, 20 Apr balance tables** — unexplained; flow could still be active (WCP-A receiving, geotech shows WL 13.10–13.15 mRL). Inflow may be unaccounted on the WCPA side.
+21. **Alert-sequence count discrepancy for WCPC Water Body Red.** The 17 Apr report calls it "day 7". With 18 Apr (continued) and 20 Apr (continued, no 19 Apr report), the running count should be ≥day 10 — the 20 Apr report does not explicitly state a day-count.
+22. **SMO narrative for S1 stacker** — 17/18 Apr wording "relocate stacker"; 20 Apr wording "construct retention berm to prevent water flowing toward the wetland". Either a change in approach or a narrative drift worth checking with SMO operations.
+
+No contradictions found between the 18 Apr geotech TSF WL (24.10 mRL) and the 17 Apr TSF summary (pool 24.10 mRL) — the 15 Apr three-way inconsistency has not recurred for this data point.
+
+### Key Findings (operational)
+
+- **WCPC Water Body Red Alert now ≥day 10.** FB improved 1.05 → 1.20 m by 20 Apr but still non-compliant. Pump running; inflows recommended halted.
+- **Old DM Pit re-entered Orange on 20 Apr.** +0.15 m to 21.15 mRL. MSP Rejects destination loop remains unresolved.
+- **Tails 3 stacker retention berm OVERTOPPED on 20 Apr.** Escalation beyond the 16 Apr fresh washout and 17 Apr narrow/short concern. Plant on shut.
+- **Paddock 73 Orange Alert 18 Apr, recovered 20 Apr.** +0.25 m to 41.85 mRL triggered alert; dewatering pulled WL back to 40.90 mRL. Toe seepage continues.
+- **SMO front-berm FB dipped to 0.90 m on 18 Apr** (below 1.0 m threshold); recovered to 1.20 m by 20 Apr. Breach risk persists.
+- **Lift 1 construction resumed 19 Apr** — 600 m³ overnight after five-day stall, 1,370 m³ on 20 Apr. Completion 29 May 2026 (52-day margin).
+- **TSF filled reassessed 59% → 60% → 61%** across 16, 19, 20 Apr reports via production-forecast updates. Capacity 1.2 Mt still unverified.
+- **TSF freeboard trajectory volatile**: 5.40 (16) → 5.90 (17, drawdown) → ~5.70 (18) → 5.25 (19) → 5.30 (20). 0.30 m from Orange on 20 Apr.
+- **Four return-water pumps commissioned** (17 Apr onward); return ratio varies 31–217% of daily slurry receipt as pool is actively managed.
+- **Liner theft and pipeline integrity issues continue unchanged.**
+- **Week 16 and Week 17 both zero rainfall**; MTD 243 mm, YTD 801 mm — erosion observations driven by earlier April events.
+
+## [2026-04-18] ingest | Daily Geotechnical Report 17-04-2026
+
+**Source:** `raw/geotech/Daily Geotechnical Report 17_04_2026.pdf` (44 pages)
+**Report:** Daily Geotechnical Report, Ref 087/GTC/2026, 17-04-2026 (06:00–11:00)
+
+**Pages created/updated:**
+- `wiki/geotech/daily-geotech-2026-04-17.md` — NEW: Full report summary with facility-freeboard chart and priority-actions table
+- `wiki/tsf/nataka-tsf.md` — UPDATED: status refreshed to 17 Apr (pool 24.60 mRL, FB 5.40 m, completion 25 May); key-concerns list restructured with SMO/Old DMB/BB1 items; 16 Apr water-balance table
+- `index.md` — UPDATED: added 17 Apr geotech entry to Geotech section
+
+**Key findings:**
+- **WCPC Water Body RED Alert — seventh consecutive day, further slight deterioration.** Freeboard 1.05 m (was 1.10 m on 16 Apr, 1.15 m on 11–15 Apr). WL 9.95 mRL. Non-compliant.
+- **BB1 stacker return water migrating to starboard sidewall (WCPA Pond)** — progressive erosion, berm-breach risk. Agreed response: redirect discharge to face the mining pond, reinstate affected section.
+- **SMO Pond/Paddock — separation-berm breach risk escalated.** Tailings encroaching with slumps; recurrent stacker washouts eroding the sea wall and spilling water over the operational area. Plan under development. S1 stacker to be relocated; S2 to be lifted.
+- **Old DMB Pit / Paddock 11C separation-berm progressive erosion** (new concern). Reinstatement required. Old DMB WL dropped to 21.00 mRL (was 21.10) — Orange Alert easing slightly since 15 Apr.
+- **WCPB Starboardside Corner — Red Alert.** WL 14.50 mRL, river-sidewall freeboard 1.50 m, retention berm 2.00 m. Dewatering required; reshape plans under consideration to prevent water entrapment.
+- **TSF pool continues rising** — WL 24.60 mRL (+0.10 from 16 Apr). Freeboard 5.40 m (Yellow), down from 5.50 m. Seepage along toe of second lift continues; another starter-wall liner section stolen.
+- **PDP-1 WL dropped 0.30 m** (34.30 → 34.00 mRL). **PDP-2 stable** at 31.90. Port-sidewall liners on both PDP-1 and PDP-2 ripped off again (third time this week).
+- **Tails 1B safety-flag inconsistency — now second day.** Marked "Safe to Operate = Yes" on 16 and 17 Apr despite unchanged +4 m stack-point variance, +2.5 m base variance, O/F discharge eroding berm, U/F roping. Contradicts the NOT SAFE flag on 13, 14, 15 Apr. Looks like a changed assessment rather than a one-day data error.
+- **BB2 stacker berm-height variance +1.60 m** flagged Orange (Safe-to-Operate box shown orange rather than green). New concern at the back of WCPB Pond.
+- **Paddock 9C operating at limited storage capacity** — both sections at 1.50 m freeboard (Yellow). Paddock 16C geometry adequate (2.50/2.80 m) but MSP Rejects backflow/erosion now in its third day; reallocation still pending.
+- **Paddock 73 seepage at Berm 73 toe continues** (fourth day). WL 41.60 mRL; side-berm seepage flagged.
+- **Full-scope inspection restored** (44 pages vs 16 Apr's 20 pages). Priority-actions table for the week 13–19 Apr includes: liner reinstatement at PDP-1/PDP-2, P72 low-section and B72 buttress (MZ, ASAP), RWD level control, WCPC/P10C/river-diversion-channel maintenance. DMC date entries ("23/06/2024", "09/06/2024") appear to be stale or transcription errors.
+- **Pilivili Top Embankment gullies from rainfall**, River Diversion Channel sidewall erosion, DMA–SMO mining-face seepage, Habelo Valley rainfall erosion — all flagged for reinstatement/maintenance.
+
+## [2026-04-18] ingest | Nataka TSF Daily Summary Report 16-04-2026
+
+**Source:** `raw/tsf/Kenmare_TSF_Summary_Report 16042026.pdf` (9 pages)
+**Report:** Nataka TSF Daily Summary Report, Ref 49/TSF/2026, 16-04-2026 (Week 16 close)
+
+**Pages created/updated:**
+- `wiki/tsf/nataka-tsf-daily-2026-04-16.md` — NEW: Daily TSF summary with freeboard trend chart
+- `wiki/tsf/nataka-tsf.md` — UPDATED: 59% filled, 491,197 t remaining, water balance refreshed
+- `index.md` — UPDATED: added 16 Apr TSF entry
+
+**Key findings:**
+- **TSF 59% filled** (708,803 t) — up 1 pp from 58% on 15 Apr. Storage space remaining 491,197 t (95 days to Phase 1 capacity). Phase 1 date unchanged at 20 July 2026.
+- **Slurry receipt moderated** — 50,313 m³ on 16 Apr (vs 67,492 on 15 Apr, 13,049 on 14 Apr, zero on 09–13 Apr). Density steady at 1.15 t/m³. Approx 12,039 t solids added. Week-16 7-day average now 46,125 m³/day pumped, 4,355 t/day solids.
+- **Freeboard drifting toward Orange** — 5.40 m (Yellow), down from 5.50 m on 15 Apr. Pool 24.60 mRL (Op-Notes), up from 24.50 on 15 Apr. Now 0.40 m from the 5.00 m Orange threshold.
+- **Water return slightly softer** — 19,927 m³/d returned TSF → Pond (was 20,219 on 15 Apr) despite all four pumps at 100% availability. Return ratio 40% of inflow (up from 30% on 15 Apr, driven by lower inflow not higher return).
+- **Lift 1 still stalled, completion slipped to 25 May** — fourth consecutive zero-fill day. Cumulative slip now 6 days over five days of stall (from 19 May on 12 Apr). Margin to capacity 56 days. ADTs still loading sand for access; runoff siphoning ongoing between Valley 3 and TSF toe berms.
+- **Water balance — TSF still net-accumulating** — TSF +26,499 m³/d (moderated from +43,385 on 15 Apr). PDP −49,572. WCPA +43,533 (strengthened from +30,915). The inter-system through-flows collapsed: WCP-A→PDP fell from 90,000 to 10,000 m³/d; PDP→Pond fell from 82,000 to 18,000 m³/d.
+- **Zero rain for the week** — weekly rain gauge chart shows zero for all days 10–16 Apr. MTD unchanged at 243 mm, YTD 801 mm.
+- **Cross-report agreement restored** — the 17 Apr geotech morning TSF WL (24.60 mRL, previous-day 24.50) matches this TSF summary's pool (24.60 mRL). No recurrence of the three-way 15 Apr inconsistency.
+- **Duplicate "Supernatant Pump 1" label in the Return Water table** — same issue as 15 Apr; second row almost certainly Pump 2.
 
 ## [2026-04-17] ingest | Daily Geotechnical Report 16-04-2026
 
@@ -445,7 +641,7 @@ Set up LLM Wiki structure with four domains: Journal, TSF, Kenmare, CSSM. Create
 **Book:** *Soil Liquefaction: A Critical State Approach*, 2nd ed., Jefferies & Been (2016)
 
 **Pages created/updated:**
-- `wiki/cssm/chapter-01-introduction.md` — NEW: Chapter 1 study notes covering the state parameter, critical state approach, and ten liquefaction case histories
+- `wiki/cssm/chapter-01-introduction.md` — NEW: Chapter 1 study notes covering the state parameter, critical state approach, and nine liquefaction case histories
 
 **Key takeaways:**
 - State parameter $\psi = e - e_c$ is the central framework — density relative to the critical state locus at current stress
@@ -510,3 +706,34 @@ Set up LLM Wiki structure with four domains: Journal, TSF, Kenmare, CSSM. Create
 - Fraser River sand full NorSand calibration: $M_{tc} = 1.45$, $N = 0.43$, $\chi_{tc} = 3.2$, $\lambda_{10} = 0.138$ — three to four times more compressible than quartz sands
 - Soil fabric is the missing variable — seismic shear modulus profiles may be the best in-situ fabric index
 - Direct relevance to Nataka TSF: earthquake screening via single $\psi$-based equation, machine-induced vibrations follow same fatigue framework, compaction targets linked to CRR
+
+## [2026-05-01] lint | CSSM book audit and integration fixes
+
+**Scope:** CSSM wiki pages created from `raw/cssm/Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf`, cross-domain concept coverage, index coverage, and viewer wikilink handling.
+
+**Pages created/updated:**
+- `wiki/synthesis/cssm-book-audit-2026-05-01.md` — NEW: reusable audit summary answering whether the CSSM book ingest was good, what inconsistencies were found, and what to improve next.
+- `wiki/concepts/critical-state-soil-mechanics.md` — NEW: cross-domain CSSM overview concept.
+- `wiki/concepts/state-parameter.md` — NEW: $\psi = e - e_c$ concept page and liquefaction thresholds.
+- `wiki/concepts/critical-state-line.md` — NEW: CSL definition and measurement cautions.
+- `wiki/concepts/effective-stress.md` — NEW: pore-pressure/effective-stress concept linked to TSF water management.
+- `wiki/concepts/norsand.md` — NEW: NorSand concept and input-property summary.
+- `wiki/concepts/critical-friction-ratio.md` — NEW: $M$ and $M_{tc}$ concept page.
+- `wiki/concepts/nerlerk.md` — NEW: hydraulic-fill liquefaction case-history concept page.
+- `wiki/concepts/molikpaq.md` — NEW: high-cycle loading case-history concept page.
+- `wiki/concepts/oosterschelde.md` — NEW: loose-pocket centrifuge-test context page.
+- `wiki/concepts/gistm.md` — NEW: tailings-governance concept linked to CSSM assessment.
+- `wiki/cssm/chapter-01-introduction.md` — corrected "ten case histories" to nine case histories.
+- `wiki/cssm/chapter-01-introduction.md` — clarified embedded Lower San Fernando image as Figure 1.13(a), not the complete two-panel Figure 1.13.
+- `wiki/cssm/chapter-02-dilatancy.md` — corrected Kenmare entity wikilink to the page's actual title.
+- `wiki/cssm/chapter-02-dilatancy.md` — corrected embedded figure numbering/caption: asset shown is source Figure 2.2, while source Figure 2.1 is not present in current assets.
+- `wiki/cssm/chapter-05-soil-variability.md` — reconciled Nerlerk failure count/wording with Chapter 1 and the source.
+- `wiki/cssm/chapter-08-finite-element.md` — corrected deep weak-zone internal reference from Section 8.4.4 to 8.3.2.
+- `wiki/cssm/chapter-10-concluding-remarks.md` — corrected critical-friction-ratio link target.
+- `viewer/src/components/MarkdownRenderer.jsx` — fixed Obsidian alias links (`[[Page|alias]]`) and resolved wikilinks by actual page slug/frontmatter title instead of forcing all links to `wiki/concepts`.
+- `index.md` — added missing CSSM chapters 5, 8, and 10; added new concept pages and the audit synthesis page.
+
+**Findings:**
+- Claude's CSSM ingest was strong on coverage and technical detail, especially for Chapters 2, 3, 4, 6, 7, and 9.
+- The main weakness was integration: missing index entries, unresolved concept pages, and viewer wikilink routing that made many Obsidian-style links dead-end or misroute.
+- Remaining best improvement: build an applied Nataka CSSM workflow page that turns the chapter notes into a practical investigation/testing/analysis sequence.

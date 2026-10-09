@@ -13,15 +13,26 @@ export default function PageView() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    setPage(null)
-    setError(null)
+    let cancelled = false
     fetchPage(domain, slug)
       .then(data => {
+        if (cancelled) return
         if (data.error) throw new Error(data.error)
         setPage(data)
+        setError(null)
       })
-      .catch(err => setError(err.message))
+      .catch(err => {
+        if (cancelled) return
+        setPage(null)
+        setError(err.message)
+      })
+    return () => {
+      cancelled = true
+    }
   }, [domain, slug])
+
+  const expectedPath = `wiki/${domain}/${slug}.md`
+  const isCurrentPage = page?.path === expectedPath
 
   if (error) {
     return (
@@ -35,7 +46,7 @@ export default function PageView() {
     )
   }
 
-  if (!page) return <div className="page-view"><p className="loading">Loading...</p></div>
+  if (!page || !isCurrentPage) return <div className="page-view"><p className="loading">Loading...</p></div>
 
   // Chart data is embedded in frontmatter as `chart` key
   const chartConfig = page.frontmatter?.chart || null

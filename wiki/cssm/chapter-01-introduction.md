@@ -4,7 +4,7 @@ domain: cssm
 type: chapter
 sources: [Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf]
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-05-01
 tags: [cssm, liquefaction, critical-state, state-parameter, norsand, case-history]
 ---
 
@@ -54,7 +54,7 @@ The **Steady State School** (Castro, Harvard) termed the critical state after ra
 
 ## 1.3 Experience of Liquefaction
 
-The chapter presents ten case histories to provide context before introducing theory.
+The chapter presents nine case histories to provide context before introducing theory.
 
 ### 1.3.1 Fort Peck Dam (1938) — Static Liquefaction of Sands
 
@@ -87,8 +87,8 @@ Two contrasting sites (Kawagishi-cho vs South Bank, only 2 km apart) demonstrate
 
 The 43 m high dam's upstream slope failed about a minute after the earthquake ended. The failure was static — caused by pore pressures generated during the earthquake, not by inertial forces during shaking. About 80,000 people lived downstream. It was only in 2003 that pore pressure migration was properly included in analysis of this failure (discussed in Chapter 6).
 
-![Figure 1.13 — Lower San Fernando Dam failure](/assets/cssm/ch01/fig1.13a-lower-san-fernando.png)
-*Figure 1.13: Liquefaction failure of Lower San Fernando Dam after the 1971 earthquake — situation at end of slide before reservoir drawdown (Karl V. Steinbrugge Collection, UC Berkeley).*
+![Figure 1.13(a) — Lower San Fernando Dam failure before reservoir drawdown](/assets/cssm/ch01/fig1.13a-lower-san-fernando.png)
+*Figure 1.13(a): Liquefaction failure of Lower San Fernando Dam after the 1971 earthquake — situation at end of slide before reservoir drawdown (Karl V. Steinbrugge Collection, UC Berkeley).*
 
 ### 1.3.5 Aberfan (1966) — Mine Waste Liquefaction
 

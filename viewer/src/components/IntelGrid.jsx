@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { fetchPage } from '../api'
 import { Layers, Zap, TrendingUp, Clock } from 'lucide-react'
@@ -66,13 +66,15 @@ function relativeDate(dateStr) {
 export default function IntelGrid({ pages }) {
   const [previews, setPreviews] = useState({})
 
-  const sorted = [...pages]
-    .sort((a, b) => {
-      const da = a.frontmatter?.updated || a.frontmatter?.created || ''
-      const db = b.frontmatter?.updated || b.frontmatter?.created || ''
-      return db.localeCompare(da)
-    })
-    .slice(0, 6)
+  const sorted = useMemo(() => (
+    [...pages]
+      .sort((a, b) => {
+        const da = a.frontmatter?.updated || a.frontmatter?.created || ''
+        const db = b.frontmatter?.updated || b.frontmatter?.created || ''
+        return db.localeCompare(da)
+      })
+      .slice(0, 6)
+  ), [pages])
 
   // Stats
   const activeDomains = new Set(pages.map(p => p.domain)).size
@@ -97,7 +99,7 @@ export default function IntelGrid({ pages }) {
         setPreviews(prev => ({ ...prev, [key]: preview }))
       }).catch(() => {})
     })
-  }, [pages.length])
+  }, [sorted])
 
   if (pages.length === 0) return null
 

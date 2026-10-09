@@ -4,7 +4,7 @@ domain: cssm
 type: chapter
 sources: [Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf]
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-05-01
 tags: [cssm, concluding, state-parameter, CPT, soil-variability, sampling, fabric, design-practice, tailings]
 ---
 
@@ -51,7 +51,7 @@ For a 100 m x 100 m site, two or three CPTs are not nearly enough. The order of 
 
 ### Effect of Soil Properties on CPT Interpretation
 
-The CPT is a continuous bearing capacity test, not a continuous friction angle test. The relationship between measured $q_c$ and soil state depends on compressibility (more accurately, $\lambda$), plastic hardening ($H$), and [[Critical State Line|critical friction ratio]] ($M_{tc}$). Chapter 4 presented the methodology for handling these effects through soil-specific calibration. The downloadable software *CPT_plot.xls* allows users to apply different methods (Plewes screening level, soil-specific calibration) and to blend approaches where appropriate.
+The CPT is a continuous bearing capacity test, not a continuous friction angle test. The relationship between measured $q_c$ and soil state depends on compressibility (more accurately, $\lambda$), plastic hardening ($H$), and the [[Critical Friction Ratio]] ($M_{tc}$). Chapter 4 presented the methodology for handling these effects through soil-specific calibration. The downloadable software *CPT_plot.xls* allows users to apply different methods (Plewes screening level, soil-specific calibration) and to blend approaches where appropriate.
 
 Two persistent difficulties stand out:
 

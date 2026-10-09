@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import { Activity, Droplets, Ruler, AlertTriangle, TrendingDown } from 'lucide-react'
 import './OperationalHUD.css'
 
+const MotionDiv = motion.div
+
 export default function OperationalHUD({ metrics }) {
   if (!metrics) return null
 
@@ -13,7 +15,7 @@ export default function OperationalHUD({ metrics }) {
   return (
     <div className="operational-hud">
       <div className="hud-top">
-        <motion.div 
+        <MotionDiv
           className="hud-stat-card"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -23,9 +25,9 @@ export default function OperationalHUD({ metrics }) {
             <span className="label">Pool Elevation</span>
             <span className="value">{metrics.poolElevation ?? '—'} mRL</span>
           </div>
-        </motion.div>
+        </MotionDiv>
 
-        <motion.div 
+        <MotionDiv
           className="hud-stat-card"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -36,9 +38,9 @@ export default function OperationalHUD({ metrics }) {
             <span className="label">Freeboard</span>
             <span className="value" style={{ color: tarpColor }}>{metrics.freeboard ?? '—'} m</span>
           </div>
-        </motion.div>
+        </MotionDiv>
 
-        <motion.div 
+        <MotionDiv
           className="hud-stat-card tarp-badge"
           style={{ '--tarp-color': tarpColor }}
           initial={{ opacity: 0, scale: 0.9 }}
@@ -47,7 +49,7 @@ export default function OperationalHUD({ metrics }) {
         >
           <AlertTriangle size={18} />
           <span>{tarpStatus}</span>
-        </motion.div>
+        </MotionDiv>
       </div>
 
       <div className="hud-bottom">
@@ -57,24 +59,24 @@ export default function OperationalHUD({ metrics }) {
             <span className="margin-days">{metrics.marginDays ?? '—'} days remaining</span>
           </div>
           <div className="progress-track">
-            <motion.div 
+            <MotionDiv
               className="progress-bar filled"
               initial={{ width: 0 }}
               animate={{ width: `${metrics.filledPercent ?? 0}%` }}
               transition={{ duration: 1, ease: 'easeOut' }}
             >
               <span className="progress-label">{metrics.filledPercent ?? '—'}% Capacity</span>
-            </motion.div>
+            </MotionDiv>
           </div>
           <div className="progress-track lift-track">
-            <motion.div
+            <MotionDiv
               className="progress-bar lift"
               initial={{ width: 0 }}
               animate={{ width: `${metrics.lift1Progress != null ? metrics.lift1Progress * 100 : 0}%` }}
               transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
             >
               <span className="progress-label">Lift 1: {metrics.lift1Progress != null ? Math.round(metrics.lift1Progress * 100) : '—'}%</span>
-            </motion.div>
+            </MotionDiv>
           </div>
         </div>
 

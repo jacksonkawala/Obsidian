@@ -4,7 +4,7 @@ domain: cssm
 type: chapter
 sources: [Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf]
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-05-01
 tags: [cssm, soil-variability, characteristic-state, stochastic, nerlerk, CPT, loose-pockets, design-codes]
 ---
 
@@ -85,7 +85,7 @@ Popescu et al. (1997) extended this work by comparing six stochastic realisation
 
 ## 5.3 — Nerlerk Berm Case History
 
-The [[Nerlerk]] berm failures (Chapter 1) are a vivid illustration of how variability governs real performance. The berm was an underwater hydraulic fill that suffered five massive slope failures at only 27 m height, still 9 m short of its design crest.
+The [[Nerlerk]] berm failures (Chapter 1) are a vivid illustration of how variability governs real performance. The berm was an underwater hydraulic fill that suffered six large mass failures, with the 1983 construction still about 10 m short of its design level.
 
 ### The Controversy
 

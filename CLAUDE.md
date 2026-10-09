@@ -88,6 +88,13 @@ Content here. Use [[wiki-links]] for cross-references between pages.
 - List of raw sources that informed this page
 ```
 
+## Highlight Convention
+
+Critical report highlights must be visually obvious in the custom viewer:
+- Use a `## Highlights` section for daily operational reports.
+- Put the most important escalations in `###` headings and bold the alert phrase, e.g. `**Red Alert**`, `**critical**`, `**overtopping**`, `**not safe**`, or `**urgent**`.
+- The viewer renders those highlight headings, bold alert phrases, and critical table cells in red with a glow. Do not rely on ordinary prose alone for Red/Orange alerts, overtopping, breach risk, not-safe flags, urgent reinstatement, or non-operational plant status.
+
 ## Operations
 
 ### Ingest

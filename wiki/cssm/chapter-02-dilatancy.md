@@ -4,7 +4,7 @@ domain: cssm
 type: chapter
 sources: [Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf]
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-05-01
 tags: [cssm, dilatancy, state-parameter, critical-state, void-ratio, CSL, stress-dilatancy, triaxial, plane-strain]
 ---
 
@@ -27,12 +27,12 @@ Two distinct definitions of dilatancy exist, though they are often conflated:
 
 The absolute definition is the integral of the rate definition over the stress path. A soil can be globally contractive in absolute terms while instantaneously dilating by the rate definition. The textbook adopts the **rate definition** because it is directly linked to the work done during deformation and is therefore fundamental to plasticity-based constitutive models (Figure 2.1).
 
-![Figure 2.1 — Dilatancy concept](/assets/cssm/ch02/fig2.1-dilatancy-concept.png)
-*Figure 2.1: Classic shear behaviour of soils. (a) Stress-displacement for dense, medium, and loose sands. (b) Volume change response — dense soils dilate, loose soils contract, both converge on the critical void ratio. (c) Critical void ratio as a function of confining stress (after Casagrande, 1936).*
-
 ### 2.1.2 Critical State
 
 Casagrande (1936) discovered, using shear box tests, that loose sands contract and dense sands dilate until they converge on approximately the same void ratio at large strains (Figure 2.2). He called this the **critical void ratio**. His motivation was practical -- engineering a dam (Franklin Falls Dam, New Hampshire) that would not liquefy.
+
+![Figure 2.2 — Early hypothesis of critical void ratio from direct shear tests](/assets/cssm/ch02/fig2.1-dilatancy-concept.png)
+*Figure 2.2: Early hypothesis of critical void ratio from direct shear tests. (a) Shear stress vs. displacement, (b) void ratio vs. displacement, and (c) void ratio vs. normal stress (after Casagrande, 1975).*
 
 The relationship between the critical void ratio and mean effective stress is called the **critical state locus** (CSL). Traditional geotechnical practice handles density by assigning different friction angles to dense and loose states of the same geological material (e.g. $\phi' = 32°$ loose vs $\phi' = 36°$ dense), without offering any relationship between them. This is intellectually unsatisfying because a soil's intrinsic properties are not density-dependent; state merely determines how those intrinsic properties are expressed as engineering behaviour.
 
@@ -391,7 +391,7 @@ However, when $D_\text{min}$ is scaled by the ratio $M_{tc}/M$ -- where $M$ is t
 
 ## Connections to TSF Practice at Nataka
 
-The concepts in this chapter are directly relevant to the [[Nataka TSF]] and geotechnical operations at [[Kenmare Moma Mining|Kenmare Moma]]:
+The concepts in this chapter are directly relevant to the [[Nataka TSF]] and geotechnical operations at [[Kenmare Moma Mining (Mauritius) Limited|Kenmare Moma]]:
 
 - **State parameter for tailings characterisation**: the sands and silts deposited in the Nataka TSF exist across a wide range of void ratios and stress levels. Assigning a single friction angle (e.g. $\phi' = 30°$ for loose tailings) ignores the controlling role of $\psi$. The state parameter framework provides a rational basis for evaluating whether a given zone within the TSF is contractive ($\psi > 0$, liquefaction susceptible) or dilative ($\psi < 0$, stable under shear).
 
@@ -422,8 +422,8 @@ The concepts in this chapter are directly relevant to the [[Nataka TSF]] and geo
 
 ## Key Figures (Described)
 
-- **Figure 2.1** -- Rate versus absolute definitions of dilatancy illustrated on a deviator stress / volumetric strain plot.
-- **Figure 2.2** -- Casagrande's 1936 shear box results: loose and dense sands converge on the critical void ratio.
+- **Figure 2.1** -- Difference between rate and absolute definitions of dilatancy. The image is not currently present in `raw/assets/cssm/ch02/`.
+- **Figure 2.2** -- Casagrande's direct shear results: loose and dense sands converge on the critical void ratio.
 - **Figure 2.3** -- Bishop (1950) decomposition of friction into dilational and frictional components.
 - **Figure 2.4** -- Kogyuk sand: same $\psi$ yields similar normalised behaviour regardless of density and stress level.
 - **Figure 2.5** -- Idealised constant-$p'$ state path from initial state to CSL.

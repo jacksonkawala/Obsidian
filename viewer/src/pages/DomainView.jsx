@@ -16,15 +16,27 @@ const domainLabels = {
 export default function DomainView() {
   const { domain } = useParams()
   const [pages, setPages] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [loadedDomain, setLoadedDomain] = useState(null)
 
   useEffect(() => {
-    setLoading(true)
+    let cancelled = false
     fetchPages(domain)
-      .then(setPages)
-      .catch(() => setPages([]))
-      .finally(() => setLoading(false))
+      .then(pages => {
+        if (cancelled) return
+        setPages(pages)
+        setLoadedDomain(domain)
+      })
+      .catch(() => {
+        if (cancelled) return
+        setPages([])
+        setLoadedDomain(domain)
+      })
+    return () => {
+      cancelled = true
+    }
   }, [domain])
+
+  const loading = loadedDomain !== domain
 
   return (
     <div className="domain-view">

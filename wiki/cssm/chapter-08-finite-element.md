@@ -4,7 +4,7 @@ domain: cssm
 type: chapter
 sources: [Soil_Liquefaction_ A_Critical_State_Approach_Second_Edition.pdf]
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-05-01
 tags: [cssm, finite-element, NorSand, NorSandFEM, slope-stability, liquefaction, displacement-control, state-parameter]
 ---
 
@@ -163,7 +163,7 @@ The chapter demonstrates that:
 The implications for [[Nataka TSF]] design and operations are significant:
 
 - **Lift 1 as crest loading on a loose foundation.** The slope simulation with surface loading directly parallels the scenario of raising the TSF embankment by placing compacted fill (Lift 1) on top of existing loose tailings. If the tailings beneath the lift have $\psi > +0.03$, the simulations predict brittle failure with very little warning — shallow bearing-capacity type failure that could progress to a catastrophic flowslide.
-- **Weak layers are realistic.** The deep weak zone scenario (Section 8.4.4) mirrors conditions that develop naturally in tailings beaches due to segregation and variable deposition energy. During [[Lift 1 Construction Log|Lift 1 construction]], layers of poorly compacted or hydraulically deposited material could create exactly the type of embedded loose zone that the simulations show attracts failure.
+- **Weak layers are realistic.** The deep weak zone scenario (Section 8.3.2) mirrors conditions that develop naturally in tailings beaches due to segregation and variable deposition energy. During [[Lift 1 Construction Log|Lift 1 construction]], layers of poorly compacted or hydraulically deposited material could create exactly the type of embedded loose zone that the simulations show attracts failure.
 - **Basal creep is relevant to foundation conditions.** If the TSF foundation includes compressible or weak strata, the basal creep loading mechanism could be triggered by ongoing settlement or by construction-induced movements. The simulations show this can cause a two-wedge failure with very little precursor displacement.
 - **FE modelling is the right tool for complex scenarios.** Limit equilibrium analyses of the Nataka TSF embankment cannot capture the strain-softening behaviour that is central to liquefaction risk. When liquefaction is a concern (and it should be for any TSF with loose saturated tailings), the analysis should progress to FE modelling with a state-parameter-based constitutive model.
 - **NorSandFEM is freely available.** The software and verification suite are downloadable, providing a practical path to implementing these analyses for Nataka and other Kenmare facilities.
